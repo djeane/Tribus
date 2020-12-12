@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="apptribus.com.tribus">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+    uses-feature android:name="android.hardware.camera2.full"
+        android:required="true"/
+    -->
+    <application
+        android:name=".application.dagger.TribusApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_borda_maior"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_borda_maior"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="apptribus.com.tribus.activities.searchable.SearchableActivity" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <!-- CHECK USER NAME -->
+        <activity
+            android:name=".activities.check_username.NewCheckUsernameActivity"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ACTIVITY REGISTER USER (ANTIGA) -->
+        <activity
+            android:name=".activities.register_user.UserRegisterActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY MAIN -->
+        <activity
+            android:name=".activities.main_activity.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <!-- ACTIVITY CREATE TRIBU -->
+        <activity
+            android:name=".activities.create_tribu.CreateTribuActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY CHAT TRIBU -->
+        <activity
+            android:name=".activities.chat_tribu.ChatTribuActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY CHAT USER(TALKER) -->
+        <activity
+            android:name=".activities.chat_user.ChatUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY DETAIL SHOW FOLLOWERS (ANTIGA) -->
+        <activity
+            android:name=".activities.detail_tribu_show_followers.DetailTribuActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY DETAIL ADD FOLLOWERS -->
+        <activity
+            android:name=".activities.detail_tribu_add_followers.DetailTribuAddFollowersActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY PROFILE POTENCIAL FOLLOWERS (ANTIGA) -->
+        <activity
+            android:name=".activities.profile_potencial_follower.ProfilePotentialFollowerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY CHAT TRIBU CAMERA -->
+        <activity
+            android:name=".activities.chat_tribu.camera.CameraActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY CHAT TRIBU CAM(certa) -->
+        <activity
+            android:name=".activities.chat_tribu.camera.CamActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY CHAT USER(TALKER) CAMERA(certa) -->
+        <activity
+            android:name=".activities.chat_user.camera.CamTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY DETAIL ADD TALKERS -->
+        <activity
+            android:name=".activities.detail_add_talker.DetailAddTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY DETAIL TALKERS -->
+        <activity
+            android:name=".activities.detail_talker.DetailTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
+
+        <!-- ACTIVITY CURRENT USER PROFILE -->
+        <activity
+            android:name=".activities.user_profile.UserProfileActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY USER PROFILE -->
+        <activity
+            android:name=".activities.invitations_request_user.InvitationRequestUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW TRIBU PROFILE (AMIN) -->
+        <activity
+            android:name=".activities.profile_tribu_admin.ProfileTribuAdminActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW TRIBU PROFILE (FOLLOWER) -->
+        <activity
+            android:name=".activities.profile_tribu_follower.ProfileTribuFollowerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW TRIBU PROFILE (SIMPLE USER) -->
+        <activity
+            android:name=".activities.profile_tribu_user.ProfileTribuUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY BLOCK USER -->
+        <activity
+            android:name=".activities.block_user.BlockUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY BLOCKED USER -->
+        <activity
+            android:name=".activities.blocked_talkers.BlockedTalkersActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY CHANGE ADMIN -->
+        <activity
+            android:name=".activities.change_admin.ChangeAdminActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SEND VIDEO (TRIBU) -->
+        <activity
+            android:name=".activities.send_video.SendVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SEND IMAGE (TRIBU) -->
+        <activity
+            android:name=".activities.send_image.SendImageActivity"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW VIDEO (TRIBU) -->
+        <activity
+            android:name=".activities.show_video.ShowVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW IMAGE (TRIBU) -->
+        <activity
+            android:name=".activities.show_image.ShowImageActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity android:name=".activities.comments.CommentsActivity" />
+
+        <!-- ACTIVITY SEND IMAGE (TALKER) -->
+        <activity
+            android:name=".activities.send_image_talker.SendImageTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SEND VIDEO (TALKER) -->
+        <activity
+            android:name=".activities.send_video_talker.SendVideoTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW IMAGE (TALKER) -->
+        <activity
+            android:name=".activities.show_image_talker.ShowImageTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SHOW VIDEO (TALKER) -->
+        <activity
+            android:name=".activities.show_video_talker.ShowVideoTalkerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY INVITATION REQUEST TRIBU -->
+        <activity
+            android:name=".activities.invitation_request_tribu.InvitationRequestTribuActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY PHONE NUMBER AUTHENTICATION -->
+        <activity
+            android:name=".activities.phone_number_authentication.PhoneNumberAuthenticationActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY FOLDERS -->
+        <activity
+            android:name=".activities.tribus_images_folder.TribusImagesFolderActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY PRIVACY POLICY -->
+        <activity
+            android:name=".activities.privacy_policy.PrivacyPolicyActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY USER REGISTER (CERTA) -->
+        <activity
+            android:name=".activities.new_register_user.RegisterUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY PRIVACY POLICY (USERNAME) -->
+        <activity
+            android:name=".activities.privacy_policy.PrivacyPolicyCheckUsernameActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+
+        <!-- ACTIVITY SEARCHABLE -->
+        <activity
+            android:name=".activities.searchable.SearchableActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+
+        <!-- SERVICES -->
+        <service android:name=".util.firebase.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".util.firebase.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".util.ConnectivityReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.com.vansuita.pickimage.provider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/picker_provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".activities.sharing.SharingActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.show_profile_image.ShowProfileImageActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".activities.conversation_topics.ConversationTopicsActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".activities.feature_choice_tribus.FeatureChoiceTribusActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop" />
+        <activity android:name=".activities.survey.SurveyActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"/>
+        <activity android:name=".activities.show_survey.ShowSurveyActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"/>
+    </application>
+
+</manifest>

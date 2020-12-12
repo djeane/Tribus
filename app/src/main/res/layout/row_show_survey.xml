@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:id="@+id/relative_main"
+    android:paddingEnd="16dp"
+    android:paddingTop="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_user_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/colorIcons"
+        fresco:roundingBorderWidth="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/relative_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/row_tribus"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/textViewOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:text="@string/popup_menu_options"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/primary_text"
+            android:visibility="invisible"
+            android:background="?attr/selectableItemBackground"/>
+
+
+        <LinearLayout
+            android:id="@+id/linear_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:bufferType="spannable"
+                android:fontFamily="@font/nunito"
+                android:linksClickable="true"
+                android:maxLines="3"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:text="Você votaria em Jair Bolsonaro para presidente?"
+                />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="top"
+                android:background="@color/primary_light"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textColor="@color/primary_text"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_marginStart="24dp"
+            tools:text="Djeane (@djeanebarros)"
+            android:layout_below="@+id/linear_username"/>
+
+
+        <RelativeLayout
+            android:id="@+id/relative_survey_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="24dp"
+            android:layout_below="@+id/tv_user_name">
+
+            <LinearLayout
+                android:id="@+id/linear_answers_options"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_option_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="100"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:text="Não. Ele é ridículo. Muito burro! Idiota!?"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_percent_one"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:text="100%"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="100"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_option_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="100"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:text="Nem de brincadeira. Ele é ridículo. Muito burro! Idiota!?"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_percent_two"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:text="0%"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/tv_option_three"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="100"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        tools:text="Sim! Sou burra como ele!"/>
+
+                    <TextView
+                        android:id="@+id/tv_percent_three"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp"
+                        tools:text="0%"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/tv_option_four"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="100"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_four"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="100">
+
+                    <TextView
+                        android:id="@+id/tv_option_five"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="100"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_percent_five"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_limit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_answers_options"
+                android:layout_marginTop="4dp"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_clock2"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_clock" />
+
+                <TextView
+                    android:id="@+id/tv_limit_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/iv_clock2"
+                    android:fontFamily="@font/nunito"
+                    android:text="termina em 16/13 às 15h15min"
+                    android:textColor="@color/red" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@+id/relative_survey_options"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_info_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:fontFamily="@font/nunito"
+                android:text="Você já votou nesta enquete."
+                android:textAllCaps="false"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:padding="4dp"
+                android:textColor="@color/red"
+                android:textSize="14sp"
+                android:visibility="invisible"/>
+
+            <Button
+                android:id="@+id/btn_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/button_thematics"
+                android:fontFamily="@font/nunito"
+                android:text="Votar"
+                android:textAllCaps="false"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:padding="4dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                style="?attr/buttonBarButtonStyle"
+                android:textColor="@color/primary_dark"
+                android:textSize="16sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_cancel_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:background="@drawable/button_leave_tribu"
+                android:fontFamily="@font/nunito"
+                android:text="Cancelar voto"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:padding="4dp"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:visibility="gone"/>
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_creation_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/relative_buttons"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/nunito"
+            android:paddingBottom="4dp"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textSize="12sp"
+            tools:text="há 3 horas"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--OLD CODE-->
+<!-- RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_invitations_request_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_invitations_request_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/textview_message_others"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="16dp">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/circle_user_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linear_top"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_creation_date"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImage="@color/colorPrimaryDark"
+                fresco:placeholderImage="@color/colorIcons"
+                fresco:retryImage="@color/colorAccent"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundingBorderColor="@color/primary_light"
+                fresco:roundingBorderWidth="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/circle_user_image"
+                app:layout_constraintTop_toBottomOf="@+id/tv_creation_date">
+
+                <TextView
+                    android:id="@+id/tv_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:textColor="@color/primary_text"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_top">
+
+                <View
+                    android:id="@+id/view_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/shadow_bottom_navigation_view" />
+
+                <LinearLayout
+                    android:id="@+id/linear_answers_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linear_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_option_one"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="100"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_percent_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="100"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_option_two"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="100"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_percent_two"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/tv_option_three"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="100"
+                            android:text="dcncnjcnjcn mkmkv vmvmkmvk kkvmkv kmkv kmkv"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_percent_three"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:text="100%"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/tv_option_four"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="100"
+                            android:text="dcncnjcnjcn mkmkv vmvmkmvk kkvmkv kmkv kmkv"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_percent_four"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:text="100%"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="100">
+
+                        <TextView
+                            android:id="@+id/tv_option_five"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="100"
+                            android:text="dcncnjcnjcn mkmkv vmvmkmvk kkvmkv kmkv kmkv"
+                            android:textColor="@color/primary_text"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_percent_five"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="2dp"
+                            android:text="100%"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_limit_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_answers_options"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/iv_clock2"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_clock" />
+
+                    <TextView
+                        android:id="@+id/tv_limit_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@+id/iv_clock2"
+                        android:fontFamily="@font/nunito"
+                        android:text="termina em 16/13 às 15h15min"
+                        android:textColor="@color/red" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/constraint_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relative_limit_date"
+                    android:layout_centerHorizontal="true">
+
+                    <Button
+                        android:id="@+id/btn_vote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:fontFamily="@font/nunito"
+                        android:text="VOTAR"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_creation_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout -->

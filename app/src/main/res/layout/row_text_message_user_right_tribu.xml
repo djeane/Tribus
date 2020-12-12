@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_text_message_user_right_tribu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp"
+    android:background="@color/transparent"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp"
+    android:paddingTop="2dp"
+    android:visibility="invisible">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_user_image_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/colorIcons"
+        fresco:roundingBorderWidth="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/relative_text_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="26dp"
+        android:background="@drawable/row_tribus"
+        android:padding="8dp"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textSize="14sp" />
+
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+            android:id="@+id/tv_message_user_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_username"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="20dp"
+            android:bufferType="spannable"
+            android:fontFamily="@font/nunito"
+            android:maxWidth="250dp"
+            android:minWidth="120dp"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/primary_text"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:emojiconSize="25sp" />
+
+        <TextView
+            android:id="@+id/message_time_user_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_message_user_right"
+            android:layout_below="@+id/tv_message_user_right"
+            android:layout_centerVertical="true"
+            android:layout_gravity="start"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/nunito"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+
+        <RelativeLayout
+            android:id="@+id/relative_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/tv_message_user_right"
+            android:layout_below="@+id/message_time_user_right">
+
+            <ImageView
+                android:id="@+id/iv_reply"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="?attr/selectableItemBackground"
+                android:src="@drawable/ic_action_reply_transparent" />
+
+            <TextView
+                android:id="@+id/tv_reply_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_reply"
+                android:text="0"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sv_tag"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImage="@drawable/ic_action_placeholder_user_accent"
+                fresco:placeholderImage="@drawable/ic_action_placeholder_user_accent"
+                fresco:retryImage="@drawable/ic_action_placeholder_user_accent"
+                fresco:roundAsCircle="true"
+                android:visibility="visible"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sv_tag_replace"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="60dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImage="@drawable/ic_action_placeholder_user_accent"
+                fresco:placeholderImage="@drawable/ic_action_placeholder_user_accent"
+                fresco:retryImage="@drawable/ic_action_placeholder_user_accent"
+                fresco:roundAsCircle="true"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/tv_tag_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@+id/sv_tag"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

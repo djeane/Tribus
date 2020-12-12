@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    app:popupTheme="@style/AppTheme.PopupOverlay"
+    app:layout_scrollFlags="scroll|enterAlways|snap"
+    app:titleTextAppearance="@style/ToolbarTextAppearance.Title">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/ic_launcher_borda_maior"
+            />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_user_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:roundAsCircle="true"
+            />
+        <!--fresco:failureImage="@drawable/placeholder_user_main_activity"
+            fresco:placeholderImage="@drawable/placeholder_user_main_activity"
+            fresco:retryImage="@drawable/placeholder_user_main_activity"-->
+        <!--fresco:roundedCornerRadius="1dp"
+            fresco:roundingBorderColor="@color/colorIcons"
+            fresco:roundingBorderWidth="1dp"-->
+
+        <TextView
+            android:id="@+id/tv_name_user"
+            android:layout_width="0dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textColor="@color/colorIcons"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circle_user_image"
+            app:layout_constraintStart_toEndOf="@+id/circle_user_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Djeane Barros" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:textColor="@color/primary_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circle_user_image"
+            app:layout_constraintStart_toEndOf="@+id/circle_user_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
+            app:layout_constraintVertical_bias="0.71000004"
+            tools:text="djeanebarros" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.Toolbar>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT-->
+<!--android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar_main"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:layout_scrollFlags="scroll|enterAlways"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:background="@drawable/ripple_effect">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_user_image"
+            android:layout_width="41dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@color/colorIcons"
+            fresco:retryImage="@color/colorAccent"
+            fresco:roundAsCircle="true"
+            fresco:roundedCornerRadius="1dp"
+            fresco:roundingBorderColor="@color/colorPrimaryDark"
+            fresco:roundingBorderWidth="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="0dp"/>
+
+        <TextView
+            android:id="@+id/tv_name_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorIcons"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="Nome"
+            app:layout_constraintLeft_toRightOf="@+id/circle_user_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:textStyle="bold"
+            android:layout_marginStart="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.063" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="0dp"
+            android:hint="Toque para ver seu perfil"
+            android:textColor="@color/primary_light"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/circle_user_image"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_user"
+            android:layout_marginStart="12dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_bias="0.127"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.Toolbar-->

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/pesquisar_tribu"
+        android:title="Pesquisar"
+        android:icon="@drawable/ic_action_new_search_primary_light" />
+
+    <item
+        android:id="@+id/adicionar_tribu"
+        android:title="Tribus Adicionadas"
+        android:icon="@drawable/ic_action_new_group_primary_light" />
+
+    <item
+        android:id="@+id/conversas"
+        android:title="Contatos"
+        android:icon="@drawable/ic_action_new_contacts_primary_light" />
+</menu>

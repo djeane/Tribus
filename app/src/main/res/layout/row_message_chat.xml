@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_chat"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/row_text_message_user_left"
+        android:id="@+id/include_layout_text_message_user_left"
+        android:visibility="gone" />
+
+    <include layout="@layout/row_audio_message_user_left"
+        android:id="@+id/include_layout_audio_message_user_left"
+        android:visibility="gone"/>
+
+    <include layout="@layout/video_message_left"
+        android:id="@+id/include_layout_video_message_user_left"
+        android:visibility="gone"/>
+
+    <include layout="@layout/image_message_user_left"
+        android:id="@+id/include_layout_image_message_user_left"
+        android:visibility="gone"/>
+
+    <include layout="@layout/row_text_message_user_right_tribu"
+        android:id="@+id/include_layout_text_message_user_right_tribu"
+        android:visibility="gone"/>
+
+    <include layout="@layout/row_audio_message_user_right_tribu"
+        android:id="@+id/include_layout_audio_message_user_right_tribu"
+        android:visibility="gone"/>
+
+    <include layout="@layout/video_message_right_tribu"
+        android:id="@+id/include_layout_video_message_user_right_tribu"
+        android:visibility="gone"/>
+
+    <include layout="@layout/image_message_user_right_tribu"
+        android:id="@+id/include_layout_image_message_user_right_tribu"
+        android:visibility="gone"/>
+
+</FrameLayout>

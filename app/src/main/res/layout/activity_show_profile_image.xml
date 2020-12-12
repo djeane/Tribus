@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".activities.show_profile_image.ShowProfileImageActivity">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/appbar"
+            android:backgroundTint="@color/transparent">
+
+            <include
+                layout="@layout/toolbar_show_profile_image" />
+        </android.support.design.widget.AppBarLayout>
+
+        <apptribus.com.tribus.activities.show_image.zoom_image.ZoomableDraweeView
+            android:id="@+id/sd_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+            fresco:actualImageScaleType="centerInside"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@android:color/transparent"
+            fresco:retryImage="@color/colorAccent"
+            fresco:fadeDuration="50"/>
+
+
+            </RelativeLayout>
+</RelativeLayout>

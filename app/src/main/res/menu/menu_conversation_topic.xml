@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <!--item
+        android:id="@+id/add_followers"
+        android:title="Adicionar participantes"
+        android:orderInCategory="100"
+        app:showAsAction="never" / -->
+
+    <item
+        android:id="@+id/profile_tribu"
+        android:title="Perfil da tribu"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/change_admin"
+        android:title="Substituir Admin"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/leave_tribu"
+        android:title="Deixar esta tribu"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_profile_tribu_activity"
+        android:icon="@drawable/padding_toolbar_profile"
+        android:title="Administrar sua Tribu"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+</menu>

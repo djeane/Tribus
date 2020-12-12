@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_invitations_request_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:background="@color/transparent"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:visibility="visible"
+    android:background="@color/transparent"
+    app:cardElevation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="2dp"
+        android:paddingStart="16dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_image_of_user_invited"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/colorIcons"
+            fresco:roundingBorderWidth="0dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:padding="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/row_tribus"
+            android:id="@+id/constraint_layout"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:id="@+id/linear_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:singleLine="true"
+                android:paddingStart="16dp"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:padding="2dp"
+                android:textStyle="bold"
+                android:layout_marginStart="25dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:id="@+id/tv_name_of_user_invited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    tools:text="Djeane Barros"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_username_user_invited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    tools:text="djeanebarros"
+                    android:textColor="@color/primary_text"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="25dp"
+                android:paddingStart="16dp"
+                android:padding="2dp"
+                app:layout_constraintTop_toBottomOf="@+id/linear_top">
+
+                <View
+                    android:id="@+id/view_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/shadow_bottom_navigation_view" />
+
+                <TextView
+                    android:id="@+id/tv_user_from_tribu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_row"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/from_tribu"
+                    android:fontFamily="@font/nunito"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/circle_image_of_tribu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/tv_user_from_tribu"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/tv_user_from_tribu"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:failureImage="@color/colorPrimaryDark"
+                    fresco:placeholderImage="@color/colorAccent"
+                    fresco:retryImage="@color/colorAccent"
+                    fresco:roundAsCircle="true"
+                    fresco:roundedCornerRadius="1dp"
+                    fresco:roundingBorderColor="@color/colorPrimaryDark"
+                    fresco:roundingBorderWidth="0dp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_tribu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/circle_image_of_tribu"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/circle_image_of_tribu"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name_of_tribu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        tools:text="Tribus"
+                        android:fontFamily="@font/nunito"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_unique_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        tools:text="tribus"
+                        android:singleLine="true"
+                        android:fontFamily="@font/nunito"/>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+                <Button
+                    android:id="@+id/btn_cancel_invitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/button_leave_tribu"
+                    android:fontFamily="@font/nunito"
+                    android:padding="8dp"
+                    android:text="@string/cancel_invitation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_buttons">
+
+                <TextView
+                    android:id="@+id/tv_invitations_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/nunito"
+                    android:textSize="12sp"
+                    tools:text="14/04/2018 - 15:24" />
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_invitations_request_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/transparent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_image_of_user_invited"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundingBorderColor="@color/primary_light"
+        fresco:roundingBorderWidth="1dp" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_invitations_request_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/transparent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="52dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_message_others"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center_horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/linear_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="42dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_name_of_user_invited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    tools:text="Djeane Barros"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/tv_username_user_invited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    tools:text="djeanebarros"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_top">
+
+                <View
+                    android:id="@+id/view_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/shadow_bottom_navigation_view" />
+
+                <TextView
+                    android:id="@+id/tv_user_from_tribu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_row"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/from_tribu"
+                    android:fontFamily="@font/nunito"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/circle_image_of_tribu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/tv_user_from_tribu"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/tv_user_from_tribu"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:failureImage="@color/colorPrimaryDark"
+                    fresco:placeholderImage="@color/colorAccent"
+                    fresco:retryImage="@color/colorAccent"
+                    fresco:roundAsCircle="true"
+                    fresco:roundedCornerRadius="1dp"
+                    fresco:roundingBorderColor="@color/colorPrimaryDark"
+                    fresco:roundingBorderWidth="0dp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_tribu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/circle_image_of_tribu"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/circle_image_of_tribu"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name_of_tribu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        android:singleLine="true"
+                        tools:text="Tribus"
+                        android:fontFamily="@font/nunito"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_unique_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        tools:text="tribus"
+                        android:singleLine="true"
+                        android:fontFamily="@font/nunito"/>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+                <Button
+                    android:id="@+id/btn_cancel_invitation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/button_leave_tribu"
+                    android:fontFamily="@font/nunito"
+                    android:padding="8dp"
+                    android:text="@string/cancel_invitation"
+                    android:textAllCaps="false"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+            </android.support.constraint.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraint_buttons">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/shadow_bottom_navigation_view" />
+
+                <TextView
+                    android:id="@+id/tv_invitations_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/nunito"
+                    android:textSize="12sp"
+                    tools:text="14/04/2018 - 15:24" />
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_invitations_request_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/transparent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_invitations_request_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:backgroundTint="@color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/textview_message_others"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/circle_image_of_user_invited"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linear_top"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImage="@color/colorPrimaryDark"
+                fresco:placeholderImage="@color/colorIcons"
+                fresco:retryImage="@color/colorAccent"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundingBorderColor="@color/primary_light"
+                fresco:roundingBorderWidth="1dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_top"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.037"
+                app:layout_constraintStart_toEndOf="@+id/circle_image_of_user_invited"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_name_of_user_invited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp"
+                    android:fontFamily="@font/nunito"/>
+
+
+                <TextView
+                    android:id="@+id/tv_username_user_invited"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito"/>
+            </LinearLayout -->
+
+            <!--RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/circle_image_of_user_invited"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_top">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/shadow_bottom_navigation_view" />
+
+                <ImageView
+                    android:id="@+id/iv_clock"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_clock" />
+
+                <TextView
+                    android:id="@+id/tv_request_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toEndOf="@+id/iv_clock"/>
+
+            </RelativeLayout-->
+
+
+            <!--android.support.constraint.ConstraintLayout
+                android:id="@+id/constraint_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.555"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout4">
+
+                <Button
+                    android:id="@+id/btn_cancel_invitation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/selectableItemBackground"
+                    android:text="Cancelar convite"
+                    android:textColor="@color/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:fontFamily="@font/nunito"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/constraint_buttons"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_top">
+
+                <View
+                    android:id="@+id/view_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_gravity="top"
+                    android:background="@drawable/shadow_bottom_navigation_view" />
+
+                <TextView
+                    android:id="@+id/tv_user_from_tribu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_row"
+                    android:layout_marginTop="8dp"
+                    android:text="Convite feito na tribu: "
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:fontFamily="@font/nunito"/>
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/circle_image_of_tribu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignTop="@+id/tv_user_from_tribu"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/tv_user_from_tribu"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:failureImage="@color/colorPrimaryDark"
+                    fresco:placeholderImage="@color/colorAccent"
+                    fresco:retryImage="@color/colorAccent"
+                    fresco:roundAsCircle="true"
+                    fresco:roundedCornerRadius="1dp"
+                    fresco:roundingBorderColor="@color/colorPrimaryDark"
+                    fresco:roundingBorderWidth="0dp" />
+
+                <LinearLayout
+                    android:id="@+id/linear_tribu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/circle_image_of_tribu"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/circle_image_of_tribu"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_tribus_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito"/>
+
+
+                    <TextView
+                        android:id="@+id/tv_tribu_unique_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/nunito"/>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/linear_tribu">
+
+                    <ImageView
+                        android:id="@+id/iv_clock2"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_clock" />
+
+                    <TextView
+                        android:id="@+id/tv_invitations_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toEndOf="@+id/iv_clock2"
+                        android:fontFamily="@font/nunito"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout -->
+
+
+
+
+
+
+
+
+
+
+<!--android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_invitations_request_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    android:layout_marginBottom="4dp"
+    android:layout_marginTop="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+
+        <LinearLayout
+            android:id="@+id/linear_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name_of_user_invited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/tv_username_user_invited"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="top"
+                android:background="@drawable/shadow_bottom_navigation_view" />
+
+
+        </LinearLayout>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_image_of_user_invited"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/linear_top"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@color/colorIcons"
+            fresco:retryImage="@color/colorAccent"
+            fresco:roundAsCircle="true"
+            fresco:roundedCornerRadius="1dp"
+            fresco:roundingBorderColor="@color/primary_light"
+            fresco:roundingBorderWidth="1dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraint_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_top"
+            android:layout_toEndOf="@+id/circle_image_of_user_invited">
+
+            <Button
+                android:id="@+id/btn_cancel_invitation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cancelar convite"
+                android:background="?attr/selectableItemBackground"
+                android:textColor="@color/colorPrimaryDark"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginRight="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="0dp" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:id="@+id/view_row"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_gravity="top"
+            android:background="@drawable/shadow_bottom_navigation_view"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/constraint_buttons"/>
+
+        <TextView
+            android:id="@+id/tv_user_from_tribu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_row"
+            android:layout_marginTop="8dp"
+            android:text="Convite feito na mTribu: "
+            app:layout_constraintLeft_toRightOf="@+id/circle_image_of_user_invited"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_image_of_tribu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/tv_user_from_tribu"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/tv_user_from_tribu"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@color/colorAccent"
+            fresco:retryImage="@color/colorAccent"
+            fresco:roundAsCircle="true"
+            fresco:roundedCornerRadius="1dp"
+            fresco:roundingBorderColor="@color/colorPrimaryDark"
+            fresco:roundingBorderWidth="0dp" />
+
+        <LinearLayout
+            android:id="@+id/linear_tribu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/circle_image_of_tribu"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/circle_image_of_tribu"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tribus_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/tv_tribu_unique_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_tribu"
+            android:layout_marginTop="8dp">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_clock"
+                android:id="@+id/iv_clock"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/tv_invitations_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_toEndOf="@+id/iv_clock"
+                android:layout_marginStart="4dp"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT-->
+<!--android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_invitation_request_user"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_image_of_user_invited"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@color/colorIcons"
+            fresco:retryImage="@color/colorAccent"
+            fresco:roundAsCircle="true"
+            fresco:roundedCornerRadius="1dp"
+            fresco:roundingBorderColor="@color/colorPrimaryDark"
+            fresco:roundingBorderWidth="0dp" /-->
+        <!--fresco:roundTopLeft="true"
+            fresco:roundTopRight="false"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="true"
+            fresco:roundWithOverlayColor="@color/colorAccent"-->
+
+        <!--TextView
+            android:id="@+id/tv_name_of_user_invited"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/circle_image_of_user_invited"
+            app:layout_constraintRight_toLeftOf="@+id/tv_name_tribu"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tribu_unique_name" /-->
+
+        <!--TextView
+            android:id="@+id/tv_name_tribu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_name_of_user_invited"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_username_user_invited"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/circle_image_of_user_invited"
+            app:layout_constraintRight_toLeftOf="@+id/tv_invitations_date"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_of_user_invited"
+            app:layout_constraintVertical_bias="0.454" />
+
+        <TextView
+            android:id="@+id/tv_invitations_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_username_user_invited"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tribus_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tribu_unique_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="0dp"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tribus_name"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+    </android.support.constraint.ConstraintLayout-->
+<!--/android.support.v7.widget.CardView-->

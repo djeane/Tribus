@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".activities.send_image.SendImageActivity">
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:id="@+id/appbar"
+            android:backgroundTint="@color/colorPrimary">
+
+            <include
+                layout="@layout/toolbar_show_image_talker" />
+        </android.support.design.widget.AppBarLayout>
+
+        <apptribus.com.tribus.activities.show_image.zoom_image.ZoomableDraweeView
+            android:id="@+id/sd_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:visibility="visible"
+            fresco:actualImageScaleType="centerInside"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@android:color/transparent"
+            fresco:retryImage="@color/colorAccent"
+            fresco:fadeDuration="50"
+            android:layout_below="@+id/appbar"
+            android:layout_above="@+id/card_description"/>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorIcons"
+            app:cardCornerRadius="5dp"
+            app:cardPreventCornerOverlap="false"
+            app:cardUseCompatPadding="false"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@color/primary_light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/linear_description"
+                android:background="@color/primary_light">
+
+                <EditText
+                    android:id="@+id/et_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:padding="16dp"
+                    android:layout_weight="1"
+                    android:hint="Descreva sua foto"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/nunito"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences|textMultiLine|textEmailSubject|textLongMessage|textUri"/>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/btn_send_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_action_send"
+                    android:layout_gravity="center"
+                    android:background="?attr/selectableItemBackground"
+                    app:elevation="6dp"
+                    app:fabSize="normal"
+                    android:layout_margin="6dp"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT-->
+<!--RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:keepScreenOn="true"
+    tools:context=".activities.send_image_talker.SendImageTalkerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="center"
+            android:visibility="visible">
+
+        </com.facebook.drawee.view.SimpleDraweeView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:background="@android:color/transparent"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#96000000"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:visibility="visible">
+
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:padding="10dp"
+                android:src="@drawable/ic_arrow_back" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/circle_tribu_image"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImage="@color/colorPrimaryDark"
+                fresco:placeholderImage="@color/colorIcons"
+                fresco:retryImage="@color/colorAccent"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundingBorderColor="@color/colorPrimaryDark"
+                fresco:roundingBorderWidth="0dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="Video Title"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/txt_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|start"
+                    android:paddingLeft="10dp"
+                    android:text="Video Subtitle"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#FFF"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/middle"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:gravity="center">
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linear_send_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#96000000"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp">
+
+            <EditText
+                android:id="@+id/et_description_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Descrição"
+                android:inputType="text|textAutoComplete|textAutoCorrect|textCapSentences|textImeMultiLine"
+                android:scrollbars="vertical"
+                android:textColorHint="@android:color/white" />
+
+            <Button
+                android:id="@+id/btn_send_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Enviar" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout-->

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_remove_talker"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:background="@color/transparent"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:visibility="visible"
+    android:background="@color/transparent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="2dp"
+        android:paddingStart="16dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/circle_image_of_talker"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:placeholderImage="@color/colorIcons"
+            fresco:retryImage="@color/colorPrimaryLight"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/colorIcons"
+            fresco:roundingBorderWidth="0dp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:padding="8dp"
+            android:background="@drawable/row_tribus"
+            android:id="@+id/constraint_layout"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/nunito"
+                android:padding="2dp"
+                android:paddingStart="16dp"
+                android:singleLine="true"
+                android:text="Djeane Barros"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/nunito"
+                android:padding="2dp"
+                android:singleLine="true"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:visibility="visible"
+                android:paddingStart="16dp"
+                android:text="djeanebarros"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+            <TextView
+                android:id="@+id/tv_remove_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito"
+                android:padding="2dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:singleLine="true"
+                android:text="em 16/03/2015"
+                android:textSize="12sp"
+                android:textStyle="italic"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_remove_talker" />
+
+
+            <Button
+                android:id="@+id/btn_remove_talker"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_leave_tribu"
+                android:fontFamily="@font/nunito"
+                android:padding="8dp"
+                android:text="Remover contato"
+                android:textAllCaps="false"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_username" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+

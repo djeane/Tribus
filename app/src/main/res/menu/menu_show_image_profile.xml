@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Compartilhe o tribus"
+        android:icon="@drawable/padding_toolbar_share"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+
+    <!--item
+        android:id="@+id/action_download"
+        android:title="Download da imagem"
+        android:icon="@drawable/padding_toolbar_download"
+        android:orderInCategory="100"
+        app:showAsAction="always"/-->
+
+</menu>

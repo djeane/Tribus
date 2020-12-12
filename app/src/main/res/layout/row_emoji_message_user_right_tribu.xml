@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_user_image_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        app:layout_constraintTop_toTopOf="parent"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:layout_constraintVertical_bias="0.0"
+        fresco:placeholderImage="@android:color/transparent"
+        fresco:retryImage="@color/colorAccent"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundingBorderColor="@color/colorIcons"
+        fresco:roundingBorderWidth="0dp"
+        android:layout_marginEnd="8dp"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        android:layout_toEndOf="@+id/circle_user_image_right"
+        android:layout_marginBottom="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="3dp"
+        >
+
+    <RelativeLayout
+        android:id="@+id/relative_text_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_messages_yellow_user_right3"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:id="@+id/tv_username"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/tv_message_user_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/primary_text"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:layout_below="@+id/tv_username"
+            android:bufferType="spannable" />
+
+        <TextView
+            android:id="@+id/iv_emoji_user_right"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:bufferType="spannable"
+            android:layout_margin="4dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <RelativeLayout
+            android:id="@+id/relative_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_emoji_user_right"
+            android:gravity="end"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="2dp">
+
+            <ImageView
+                android:id="@+id/iv_clock"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/ic_clock"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/message_time_user_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="textEnd"
+                android:textSize="12sp"
+                android:singleLine="true"
+                android:layout_marginStart="4dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/iv_clock"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

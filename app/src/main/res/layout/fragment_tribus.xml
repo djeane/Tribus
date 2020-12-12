@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorIcons">
+
+    <RelativeLayout
+        android:id="@+id/relative_tribus_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_tribus_category"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorIcons"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </RelativeLayout>
+
+    <!--FOLLOWED TRIBUS-->
+    <RelativeLayout
+        android:id="@+id/relative_list_thematics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_tribus_category">
+
+        <TextView
+            android:id="@+id/tv_info_thematics"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="14sp"
+            android:paddingTop="10dp"
+            android:text="Não há tribus adicionadas."
+            android:textStyle="italic"
+            android:textColor="@color/primary_dark"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_thematics"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorIcons"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </RelativeLayout>
+
+    <!--REMOVED TRIBUS-->
+    <RelativeLayout
+        android:id="@+id/relative_list_thematics_removed_tribus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_tribus_category"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_info_thematics_removed_tribus"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textSize="14sp"
+            android:paddingTop="10dp"
+            android:text="Não há tribus adicionadas."
+            android:textStyle="italic"
+            android:textColor="@color/primary_dark"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:visibility="gone"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_thematics_removed_tribus"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorIcons"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_tribus_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_list_thematics"
+        android:background="@color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_tribus_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator_options_thematics"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_list_thematics"
+        android:background="@color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_tribus_thematics"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:visibility="visible"/>
+
+        <ProgressBar
+            android:id="@+id/progressbar_thematics"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_bottom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="4dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+<!--OLD LAYOUT-->
+<!--android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_tribus_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorIcons"
+    tools:context="apptribus.com.tribus.activities.main_activity.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relative_layout_tribu_admin"
+        android:background="@color/colorIcons">
+
+        <TextView
+            android:id="@+id/tv_tribu_which_you_admin"
+            android:layout_width="match_parent"
+            android:fontFamily="@font/nunito"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="@color/primary_text"
+            android:background="@color/colorIcons"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/include_layout_tribu_admin"
+            layout="@layout/layout_tribu_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tribu_which_you_admin"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_tribus_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            android:layout_below="@+id/include_layout_tribu_admin"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout-->
+
+
+
+
+
+
+
+
+

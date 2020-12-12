@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content">
+
+    <!--TextView
+        android:id="@+id/tv_thematics"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:text="Comunicação"
+        android:padding="8dp"
+        android:textColor="@color/primary_text"
+        / -->
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_image_of_talker"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/colorIcons"
+        fresco:roundingBorderWidth="0dp"
+        />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/row_tribus"
+        android:id="@+id/constraint_layout"
+        android:visibility="visible"
+        android:padding="4dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_tribus_name"
+            android:layout_width="0dp"
+            android:layout_height="26dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:text="Para testes mkmf"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_follow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tribus_uniquename"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:text="paratestes"
+            android:textColor="@color/primary_text"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/button_follow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tribus_name" />
+
+
+        <Button
+            android:id="@+id/button_follow"
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/button_accepted_and_added"
+            android:fontFamily="@font/nunito"
+            android:text="Participando"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="12sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/sd_image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tribus_uniquename"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/colorIcons"
+            fresco:roundingBorderWidth="0dp"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="4dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/sd_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/grandient_row_mural"
+            >
+
+                <RelativeLayout
+                    android:id="@+id/relative_inspiration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/iv_inspiration"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/transparent"
+                        android:src="@drawable/ic_start"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_num_inspiration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/iv_inspiration"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/iv_inspiration"
+                        android:fontFamily="@font/nunito"
+                        android:text="20"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_love"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/relative_inspiration">
+
+                    <ImageView
+                        android:id="@+id/iv_love"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:src="@drawable/ic_heart" />
+
+                    <TextView
+                        android:id="@+id/tv_num_love"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/iv_love"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/iv_love"
+                        android:fontFamily="@font/nunito"
+                        android:text="200"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relative_genius"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/relative_love">
+
+                    <ImageView
+                        android:id="@+id/iv_genius"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/transparent"
+                        android:src="@drawable/ic_lamp"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:id="@+id/tv_num_genius"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/iv_genius"
+                        android:layout_marginStart="4dp"
+                        android:layout_toEndOf="@+id/iv_genius"
+                        android:fontFamily="@font/nunito"
+                        android:text="24"
+                        android:textSize="12sp"
+                        android:layout_centerVertical="true"/>
+
+
+
+                </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_tags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:text="10000 tags"
+                android:layout_toEndOf="@+id/relative_genius"
+                android:textColor="@color/primary_dark"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="textEnd"
+                />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
+

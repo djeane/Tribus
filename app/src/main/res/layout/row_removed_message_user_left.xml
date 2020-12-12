@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:id="@+id/relative_row_removed_message_user_left">
+
+<RelativeLayout
+    android:id="@+id/layout_row_removed_user_left"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:background="@drawable/row_messages_user_left"
+    android:visibility="visible">
+
+    <hani.momanii.supernova_emoji_library.Helper.EmojiconTextView
+        android:id="@+id/tv_message_user_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/nunito"
+        android:hint="Esta mensagem foi removida."
+        android:paddingEnd="8dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat"
+        android:textColor="@color/primary_text"
+        android:textColorHint="@color/primary_text"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:emojiconSize="25sp" />
+
+    <TextView
+        android:id="@+id/message_time_user_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_message_user_left"
+        android:layout_below="@+id/tv_message_user_left"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/nunito"
+        android:paddingEnd="8dp"
+        tools:text="14/12/2018 - 15:44"
+        android:textAlignment="viewEnd"
+        android:textSize="12sp"
+        android:visibility="visible" />
+
+</RelativeLayout>
+</RelativeLayout>

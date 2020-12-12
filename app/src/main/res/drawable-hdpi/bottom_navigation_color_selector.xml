@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <item
+        android:drawable="@color/colorIcons"
+        android:state_checked="true"
+        android:color="@color/accent"/>
+
+    <item
+        android:color="@color/colorIcons"
+        android:state_enabled="true"
+        android:state_pressed="true"
+        android:drawable="@color/colorAccent"/>
+
+    <item android:color="@color/primary_text"
+        android:drawable="@color/colorIcons" />
+</selector>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:color="@color/colorIcons"
+        android:state_checked="true" />
+
+    <item
+        android:color="@color/colorIcons"
+        android:state_enabled="true"
+        android:state_pressed="true" />
+
+    <item android:color="@color/primary_dark" />
+</selector-->

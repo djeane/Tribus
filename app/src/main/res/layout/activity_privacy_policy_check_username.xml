@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar_privacy_policy" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tipos de dados coletados"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv1"
+                android:layout_marginBottom="8dp"
+                android:text="Entre os tipos de dados pessoais que este aplicativo recolhe, por si só ou por meio de terceiros, estão: nome, sobrenome, sexo, data de nascimento, número de telefone, nome de usuário e imagem."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv2"
+                android:layout_marginBottom="8dp"
+                android:text="Detalhes completos sobre cada tipo de dados dessoais coletados são fornecidos nas seções dedicadas desta política de privacidade ou por textos explicativos específicos exibidos antes da coleta de dados."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv3"
+                android:layout_marginBottom="8dp"
+                android:text="Os dados pessoais poderão ser fornecidos livremente pelo usuário, ou, no caso dos dados de utilização, coletados automaticamente ao se utilizar este aplicativo."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv4"
+                android:layout_marginBottom="8dp"
+                android:text="Todos os dados solicitados por este aplicativo são obrigatórios e a falta de fornecimento destes dados poderá impossibilitar este aplicativo de fornecer os seus serviços. Nos casos em que este aplicativo afirmar especificamente que alguns dados não são obrigatórios, os usuários ficam livres para deixarem de comunicar estes dados sem nenhuma consequência para a disponibilidade ou o funcionamento deste serviço (este aplicativo)."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv5"
+                android:layout_marginBottom="8dp"
+                android:text="Os usuários que tiverem dúvidas a respeito de quais dados pessoais são obrigatórios estão convidados a entrar em contato com o proprietário deste aplicativo."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv6"
+                android:layout_marginBottom="8dp"
+                android:text="Quaisquer usos de cookies – ou de outras ferramentas de rastreamento – por este aplicativo serão para a finalidade de fornecer os serviços solicitados pelo usuário, além das demais finalidades descritas no presente documento e na Política de Cookies, se estiver disponível."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv7"
+                android:layout_marginBottom="8dp"
+                android:text="Quaisquer usos de cookies – ou de outras ferramentas de rastreamento – por este aplicativo serão para a finalidade de fornecer os serviços solicitados pelo usuário, além das demais finalidades descritas no presente documento e na Política de Cookies, se estiver disponível."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv8"
+                android:layout_marginBottom="4dp"
+                android:text="Método e local de processamento dos dados"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv9"
+                android:layout_marginBottom="4dp"
+                android:text="Método de processamento"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv10"
+                android:layout_marginBottom="8dp"
+                android:text="O controlador de dados processa os dados de usuários de forma adequada e tomará as medidas de segurança adequadas para impedir o acesso não autorizado, divulgação, alteração ou destruição não autorizada dos dados."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv11"
+                android:layout_marginBottom="8dp"
+                android:text="O processamento de dados é realizado utilizando computadores e /ou ferramentas de TI habilitadas, seguindo procedimentos organizacionais e meios estritamente relacionados com os fins indicados. Além do controlador de dados, em alguns casos, os dados podem ser acessados por certos tipos de pessoas envolvidas com a operação do site (administração, vendas, marketing, administração legal do sistema) ou pessoas externas (como fornecedores terceirizados de serviços técnicos, carteiros, provedores de hospedagem, empresas de TI, agências de comunicação) nomeadas, quando necessário, como processadores de dados por parte do proprietário. A lista atualizada destas partes pode ser solicitada a partir do controlador de dados a qualquer momento."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv12"
+                android:layout_marginBottom="4dp"
+                android:text="Lugar de processamento dos dados"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+
+            <TextView
+                android:id="@+id/tv14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv13"
+                android:layout_marginBottom="8dp"
+                android:text="Os dados são processados nas sedes de operação do controlador de dados, e em quaisquer outros lugares onde as partes envolvidas com o processamento estejam localizadas. Para mais informações, por favor entre em contato com o controlador de dados."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv14"
+                android:layout_marginBottom="4dp"
+                android:text="Período de conservação dos dados"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv15"
+                android:layout_marginBottom="8dp"
+                android:text="Os dados são mantidos pelo período necessário para prestar o serviço solicitado pelo usuário, ou pelos fins descritos neste documento, e o usuário pode solicitar ao controlador de dados para que os suspenda ou remova."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv16"
+                android:layout_marginBottom="4dp"
+                android:text="Uso dos dados coletados"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv17"
+                android:layout_marginBottom="8dp"
+                android:text="Os dados relativos ao usuário são coletados para permitir que o proprietário forneça os serviços, bem como para os seguintes propósitos: registro e autenticação."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv18"
+                android:layout_marginBottom="8dp"
+                android:text="Os dados pessoais utilizados para cada finalidade estão descrito nas seções específicas deste documento."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv19"
+                android:layout_marginBottom="4dp"
+                android:text="Informações detalhadas sobre o processamento de dados pessoais"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv20"
+                android:layout_marginBottom="8dp"
+                android:text="Os Dados Pessoais são recolhidos para os seguintes fins e utilizando os seguintes serviços:"
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv21"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Registro e autenticação"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv22"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Ao se registrar ou autenticar, os usuários permitem a este serviço (este aplicativo) identificá-los e dar-lhes o acesso a serviços dedicados. Dependendo do que estiver descrito abaixo, os serviços de registro e autenticação podem ser fornecidos por terceiros. Neste caso, este aplicativo poderá acessar alguns dados armazenados por estes serviços de terceiros para fins de registro ou identificação."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv23"
+                android:layout_marginBottom="4dp"
+                android:text="Informações adicionais sobre a coleta e processamento de dados"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv24"
+                android:layout_marginBottom="4dp"
+                android:text="Ação jurídica"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv25"
+                android:layout_marginBottom="8dp"
+                android:text="Os dados pessoais dos usuários podem ser utilizados para fins jurídicos pelo controlador de dados em juízo ou nas etapas conducentes à possível ação jurídica decorrente de uso indevido deste serviço (este aplicativo) ou dos serviços relacionados."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv26"
+                android:layout_marginBottom="8dp"
+                android:text="O usuário declara estar ciente de que o controlador dos dados poderá ser obrigado a revelar os dados pessoais mediante solicitação das autoridades governamentais."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv27"
+                android:layout_marginBottom="4dp"
+                android:text="Informações adicionais sobre os dados pessoais do usuário"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv28"
+                android:layout_marginBottom="8dp"
+                android:text="Além das informações contidas nesta política de privacidade, este aplicativo poderá fornecer ao usuário informações adicionais e contextuais sobre os serviços específicos ou a coleta e processamento de dados pessoais mediante solicitação."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv29"
+                android:layout_marginBottom="4dp"
+                android:text="Logs do sistema e manutenção"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv31"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv30"
+                android:layout_marginBottom="8dp"
+                android:text="Para fins de operação e manutenção, este aplicativo e quaisquer serviços de terceiros poderão coletar arquivos que gravam a interação com este aplicativo (logs do sistema) ou usar, para este fim, outros dados pessoais (tais como endereço IP)."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv32"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv31"
+                android:layout_marginBottom="4dp"
+                android:text="Informações não contidas nesta política"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv32"
+                android:layout_marginBottom="8dp"
+                android:text="Mais detalhes sobre a coleta ou o processamento de dados pessoais, neste aplicativo, podem ser solicitados ao controlador de dados, a qualquer momento. Favor verificar os meios de contato disponíveis neste aplicativo."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv34"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv33"
+                android:layout_marginBottom="4dp"
+                android:text="Direitos dos usuários"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv35"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv34"
+                android:layout_marginBottom="8dp"
+                android:text="Os usuários têm o direito de, a qualquer tempo, consultar o controlador de dados para saber se os seus dados pessoais foram armazenados e saber mais sobre o conteúdo e a origem, verificar a sua exatidão ou para pedir que sejam complementados, cancelados, atualizados ou corrigidos ou bloquear quaisquer dados mantidos em violação da lei, bem como se opor ao seu tratamento por quaisquer razões legítimas. Os pedidos devem ser enviados para o controlador de dados usando a informação de contato fornecida acima."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv35"
+                android:layout_marginBottom="8dp"
+                android:text="Este aplicativo não suporta pedidos de “Não Me Rastreie”. Para determinar se qualquer um dos serviços de terceiros que utiliza honram solicitações de “Não Me Rastreie”, por favor leia as políticas de privacidade."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv37"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv36"
+                android:layout_marginBottom="4dp"
+                android:text="Mudanças nesta política de privacidade"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv38"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv37"
+                android:layout_marginBottom="8dp"
+                android:text="O controlador de dados se reserva o direito de fazer alterações nesta política de privacidade a qualquer momento, mediante comunicação aos seus usuários nesta página. É altamente recomendável que esta página seja consultada várias vezes em relação à última modificação descrita na parte inferior. Se o usuário não concordar com qualquer das alterações da Política de Privacidade, poderá cessar o uso deste serviço (este aplicativo) e solicitar ao controlador de dados que apague seus dados pessoais. Salvo disposição em contrário, a atual política de privacidade se aplica a todos os dados pessoais dos usuários que o controlador de dados tiver."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv38"
+                android:layout_marginBottom="4dp"
+                android:text="Informações sobre esta Política de Privacidade"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv39"
+                android:layout_marginBottom="8dp"
+                android:text="O controlador de dados é responsável por esta Política de Privacidade, elaborada a partir dos módulos fornecidos pela Iubenda e hospedados nos servidores da Iubenda."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv40"
+                android:layout_marginBottom="4dp"
+                android:text="Definições e referências jurídicas"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="16sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv42"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv41"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Dados pessoais (ou dados)"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv42"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Quaisquer informações relativas a uma pessoa física, pessoa jurídica, instituição ou associação, as quais sejam, ou possam ser identificadas, mesmo que indiretamente, por referência a quaisquer outras informações, incluindo um número de identificação pessoal."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv44"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv43"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Dados de uso"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv44"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Informações coletadas automaticamente a partir deste serviço (ou serviços de terceiros contratados neste serviço (este aplicativo), que podem incluir: os endereços IP ou nomes de domínio dos computadores utilizados pelos usuários que utilizam este aplicativo, os endereços URI (Identificador Uniforme de Recurso), a data e hora do pedido, o método utilizado para submeter o pedido ao servidor, o tamanho do arquivo recebido em resposta, o código numérico que indica o status do servidor de resposta (resultado positivo, erro , etc.), o país de origem, as características do navegador e do sistema operacional utilizado pelo usuário, os vários detalhes de tempo por visita (por exemplo, o tempo gasto em cada página dentro do aplicativo) e os detalhes sobre o caminho seguido dentro da aplicação, com especial referência à sequência de páginas visitadas e outros parâmetros sobre o sistema operacional do dispositivo e/ou ambiente de TI do usuário."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv45"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Usuário"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv47"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv46"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Pessoa que usa este aplicativo que deverá coincidir com ou estar autorizada pelo titular dos dados a quem os dados pessoais se referem."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv47"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Titular dos dados"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv49"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv48"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Pessoa jurídica ou física a quem os dados pessoais se referem."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv49"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Processador de dados (ou supervisor de dados)"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv51"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv50"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Pessoa física, pessoa jurídica, a administração pública ou qualquer outro órgão, associação ou organização autorizada pelo controlador de dados para o processamento dos dados pessoais em conformidade com esta Política de Privacidade."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv51"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Controlador de dados (ou proprietário)"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv53"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv52"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="Pessoa física, pessoa jurídica, administração pública ou qualquer outra entidade, associação ou organização com direitos, também em conjunto com outro controlador dos dados, para tomar decisões sobre as finalidades e os métodos de processamento de dados pessoais e os meios utilizados, incluindo medidas de segurança relativas ao funcionamento e ao uso deste serviço. O controlador de dados, a menos que seja especificado de outra forma, é o proprietário deste serviço (este aplicativo)."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv54"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv53"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="16dp"
+                android:text="Este aplicativo"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv55"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv54"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="16dp"
+                android:text="A ferramenta de hardware ou software pela qual os dados pessoais do usuário são coletados."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="top"
+                android:layout_marginBottom="4dp"
+                android:layout_below="@+id/tv55"
+                android:background="@color/primary_text"
+                android:fontFamily="@font/nunito"/>
+
+
+            <TextView
+                android:id="@+id/tv56"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_marginBottom="8dp"
+                android:text="Esta Política de Privacidade é apenas sobre este aplicativo."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+
+            <TextView
+                android:id="@+id/tv57"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv56"
+                android:bufferType="spannable"
+                android:text="Última atualização: 18 de novembro de 2017."
+                android:textAlignment="textStart"
+                android:textColor="@color/primary_text"
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"/>
+
+
+
+
+            <!--WebView
+            android:id="@+id/wv_privacy_policy_check_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appbar">
+
+        </WebView-->
+
+        </RelativeLayout>
+    </ScrollView>
+</android.support.design.widget.CoordinatorLayout>

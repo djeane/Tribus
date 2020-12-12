@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_profile_talker"
+        android:icon="@drawable/padding_toolbar_face_user"
+        android:title="Perfil do contato"
+        android:orderInCategory="100"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_remove_talkers"
+        android:title="Remover contato"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+
+</menu>

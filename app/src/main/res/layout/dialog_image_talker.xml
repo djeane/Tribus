@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_image_talker"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="visible"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:adjustViewBounds="true"
+        fresco:roundedCornerRadius="4dp"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="false" />
+
+    <!--com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_large_image_admin"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        fresco:actualImageScaleType="centerInside"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent"
+        android:adjustViewBounds="true"/-->
+
+    <!--RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_dialog"
+        android:layout_gravity="bottom"-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sd_image_talker"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/tv_name_of_talker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:textColor="@color/colorIcons"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"/>
+
+        <TextView
+            android:id="@+id/tv_username_talker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="2dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorIcons"
+            android:textSize="14sp"
+            android:layout_below="@+id/tv_name_of_talker"
+            android:layout_alignParentStart="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"/>
+
+
+        <TextView
+            android:id="@+id/tv_created_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="4dp"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            android:layout_below="@+id/tv_username_talker"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"/>
+    </RelativeLayout>
+
+    <!--/RelativeLayout-->
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT-->
+<!--RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_large_image_admin"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        fresco:actualImageScaleType="centerInside"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/tv_name_of_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/primary_text"
+        android:layout_below="@+id/sd_large_image_admin"
+        android:textAlignment="center"
+        android:text="Name of Admin"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/tv_username_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@+id/tv_name_of_admin"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:text="Username of Admin"
+        android:textSize="18sp"/>
+
+
+    <TextView
+        android:id="@+id/tv_admin_since"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:layout_below="@+id/tv_username_admin"
+        android:textAlignment="textEnd"
+        android:text="Admin since"
+        android:textSize="14sp"/>
+</RelativeLayout-->

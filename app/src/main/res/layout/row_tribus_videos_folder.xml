@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:id="@+id/frame_videos_folder"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/textview_message_others">
+
+    <RelativeLayout
+        android:id="@+id/relative_exoplayer"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+            android:id="@+id/video_frame"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"
+            app:resize_mode="fixed_height"
+            app:use_controller="false">
+
+        </com.google.android.exoplayer2.ui.SimpleExoPlayerView>
+
+
+        <RelativeLayout
+            android:id="@+id/loading_painel"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:visibility="visible">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_button_play"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="5dp"
+                app:cardPreventCornerOverlap="false"
+                app:cardUseCompatPadding="false"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@android:color/transparent">
+
+
+                <ImageButton
+                    android:id="@+id/btn_play"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/ic_action_play_button_color_primary_dark"
+                    android:visibility="visible"
+                    android:layout_gravity="center" />
+
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorIcons"
+        app:cardCornerRadius="5dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        android:backgroundTint="@color/primary_light"
+        android:layout_margin="4dp"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:textAlignment="center"
+            android:textColor="@color/primary_text"
+            android:visibility="visible"
+            android:fontFamily="@font/nunito"/>
+
+    </android.support.v7.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/relative_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/shadow_dialog"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_clock"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/ic_action_clock_folders"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"/>
+
+        <TextView
+            android:id="@+id/image_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:singleLine="true"
+            android:fontFamily="@font/nunito"
+            android:layout_toEndOf="@+id/iv_clock"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</FrameLayout>

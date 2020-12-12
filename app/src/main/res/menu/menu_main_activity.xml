@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_profile_activity"
+        android:title="Perfil"
+        android:icon="@drawable/padding_toolbar_profile"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:contentDescription="@string/icon_user_profile_edit"/>
+
+
+    <item
+        android:id="@+id/action_share"
+        android:title="Compartilhe o tribus"
+        android:icon="@drawable/padding_toolbar_share"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_privacy_policy"
+        android:title="Política de privacidade do Tribus"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+
+</menu>

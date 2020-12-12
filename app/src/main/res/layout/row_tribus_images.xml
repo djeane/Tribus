@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/item_tribus_images"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_margin="16dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_image_of_tribu"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundingBorderColor="@color/primary_light"
+        fresco:roundingBorderWidth="1dp"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_name_of_tribu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:fontFamily="@font/nunito"
+        android:singleLine="true"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:layout_below="@+id/circle_image_of_tribu"
+        android:visibility="visible"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

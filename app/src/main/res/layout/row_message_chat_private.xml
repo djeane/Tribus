@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_chat"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/row_text_message_user_left"
+        android:id="@+id/include_layout_text_message_user_left_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/row_audio_message_user_left"
+        android:id="@+id/include_layout_audio_message_user_left_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/video_message_left"
+        android:id="@+id/include_layout_video_message_user_left_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/image_message_user_left"
+        android:id="@+id/include_layout_image_message_user_left_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/row_text_message_user_right"
+        android:id="@+id/include_layout_text_message_user_right_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/row_audio_message_user_right"
+        android:id="@+id/include_layout_audio_message_user_right_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/video_message_right"
+        android:id="@+id/include_layout_video_message_user_right_private_chat"
+        android:visibility="gone"/>
+
+    <include layout="@layout/image_message_user_right"
+        android:id="@+id/include_layout_image_message_user_right_private_chat"
+        android:visibility="gone"/>
+
+</FrameLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--OLD CODE-->
+<!--android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="16dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_user_image_right"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_right"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:layout_constraintVertical_bias="0.0"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundingBorderColor="@color/colorPrimaryDark"
+        fresco:roundingBorderWidth="0dp" />
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_user_image_left"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_left"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:layout_constraintRight_toRightOf="parent"
+        fresco:layout_constraintVertical_bias="0.0"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent"
+        fresco:roundAsCircle="true"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundingBorderColor="@color/colorPrimaryDark"
+        fresco:roundingBorderWidth="0dp" />
+
+    <TextView
+        android:id="@+id/tv_message_user_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textview_message_others"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_right"
+        fresco:layout_constraintBottom_toBottomOf="parent"
+        fresco:layout_constraintLeft_toRightOf="@+id/circle_user_image_right"
+        fresco:layout_constraintRight_toRightOf="@+id/circle_user_image_left"
+        fresco:layout_constraintVertical_bias="0.0"
+        tools:text="message_user_right" />
+
+    <TextView
+        android:id="@+id/tv_message_user_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textview_message_sender"
+        android:textAlignment="viewEnd"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_left"
+        fresco:layout_constraintBottom_toBottomOf="parent"
+        fresco:layout_constraintLeft_toLeftOf="@+id/circle_user_image_right"
+        fresco:layout_constraintRight_toLeftOf="@+id/circle_user_image_left"
+        fresco:layout_constraintVertical_bias="0.0"
+        tools:text="message_user_left" />
+
+    <TextView
+        android:id="@+id/tv_username_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="4dp"
+        android:text="textobevjivivjivjivjivjiv"
+        android:textColor="@color/colorIcons"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_username_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="4dp"
+        android:text="fjfjifjifjifjifjifjifjffjifjifj"
+        android:textColor="@color/colorIcons"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/img_btn_play_user_left"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textview_voice_message_sender"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@+id/circle_user_image_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_left"
+        app:srcCompat="@drawable/ic_play_voice_message" />
+
+    <TextView
+        android:id="@+id/tv_voice_message_user_left"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textview_voice_message_sender"
+        android:text="Messagem de aúdio"
+        android:textAlignment="center"
+        android:textColor="@color/colorIcons"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/img_btn_play_user_left"
+        app:layout_constraintRight_toLeftOf="@+id/circle_user_image_left"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_left" />
+
+    <ImageButton
+        android:id="@+id/img_btn_play_user_right"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="120dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textview_voice_message_others"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_right"
+        app:srcCompat="@drawable/ic_play_voice_message" />
+
+    <TextView
+        android:id="@+id/tv_voice_message_user_right"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textview_voice_message_others"
+        android:text="Mensagem de aúdio"
+        android:textAlignment="center"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/circle_user_image_right"
+        app:layout_constraintRight_toLeftOf="@+id/img_btn_play_user_right"
+        app:layout_constraintTop_toBottomOf="@+id/tv_username_right" />
+
+</android.support.constraint.ConstraintLayout-->

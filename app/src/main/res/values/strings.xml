@@ -1,0 +1,324 @@
+<resources>
+    <string name="app_name">Tribus</string>
+    <string name="transition_card">transição de card</string>
+
+    <!--STRINGS FOR TIME-->
+    <string name="date_util_term_less">há menos de</string>
+    <string name="date_util_term_just_now">agora</string>
+    <string name="date_util_term_a">um</string>
+    <string name="date_util_term_an">uma</string>
+    <string name="date_util_unit_second">segundo</string>
+    <string name="date_util_unit_seconds">segundos</string>
+    <string name="date_util_unit_minute">1min</string>
+    <string name="date_util_unit_minutes">min</string>
+    <string name="date_util_unit_hour">h</string>
+    <string name="date_util_unit_one_hour">há 1h</string>
+    <string name="date_util_unit_one_and_half_hour">há 1h e 30min</string>
+    <string name="date_util_unit_half_hour">h e meia</string>
+    <string name="date_util_unit_hours">h</string>
+    <string name="date_util_unit_day">1 dia</string>
+    <string name="date_util_unit_days">dias</string>
+    <string name="date_util_unit__one_month">1 mês</string>
+    <string name="date_util_unit_month">mês</string>
+    <string name="date_util_unit_months">meses</string>
+    <string name="date_util_unit_one_year">1 ano</string>
+    <string name="date_util_unit_year">ano</string>
+    <string name="date_util_unit_years">anos</string>
+    <string name="date_util_prefix_lt">menos de um</string>
+    <string name="date_util_prefix_about">há</string>
+    <string name="date_util_prefix_over">há mais de</string>
+    <string name="date_util_prefix_almost">há quase</string>
+    <string name="date_util_suffix">atrás</string>
+
+    <!--FOR SEARCHABLE-->
+    <string name="app_label">Tribus</string>
+    <string name="search_hint">Pesquisar tribus</string>
+
+    <!-- FOR CAMERA PERMISSION-->
+    <string name="permission_request">Este app precisa de permissão para gravar videos com áudio.</string>
+    <string name="permission_request_image">Este app precisa de permissão para acessar imagens.</string>
+
+    <!--HAS CHILDREN-->
+    <string name="hasChildrenBlockUser">Não há contato adicionado.</string>
+    <string name="hasChildrenConversationTopic">Crie um tópico de conversa.</string>
+    <string name="hasChildrenDetailAddTalker">Não há convites recebidos.</string>
+    <string name="hasChildrenAddFollowers">Não há participantes para serem adicionados.</string>
+    <string name="hasChildrenInvitationRequestTribu">Não há solicitações para participar de tribus.</string>
+    <string name="hasChildrenInvitationResquestTalker">Não há contatos convidados.</string>
+    <string name="hasChildrenMainTalks">Adicione seus contatos particulares.</string>
+    <string name="hasChildrenMainTimeLine">Seja o primeiro a criar uma tribu!</string>
+    <string name="hasChildrenMainTribus">Participe de suas tribus favoritas ou crie uma.</string>
+    <string name="hasChildrenTribus">Você não está participando de nenhuma tribu.</string>
+    <string name="hasChildrenTalkers">Você não adicionou nenhum contanto.</string>
+
+    <!--ACTIVITY CHECK USERNAME-->
+    <string name="tv_check_username">\@nome_de_usuario</string>
+    <string name="tv_info_check_username">Seu nome de usuário será gerado automaticamente a partir do nome informado, mas você pode alterá-lo depois. O nome de usuário deve ser único, por isso, é preciso verificar se ele já existe antes de continuar.</string>
+    <string name="btn_verify_username">Verificar nome de usuário</string>
+    <string name="inform_your_name">Informe seu nome…</string>
+    <string name="title_check_username">Cadastro</string>
+    <string name="subtitle_check_username">Nessa rede, o \'social\' é de verdade!</string>
+    <string name="checking_username">Verificando o nome de usuário…</string>
+    <string name="please_inform_your_name">Por favor, informe seu nome.</string>
+    <string name="invalid_special_caracter">Você digitou um caracter especial inválido.</string>
+    <string name="arroba">\@</string>
+    <string name="user_already_exist">O nome de usuário já existe!</string>
+    <string name="privacy_policy_info">Ao realizar seu cadastro, você concorda com a Política de Privacidade do Tribus.</string>
+    <string name="about_username">Sobre o nome de usuário…</string>
+    <string name="ok">OK, ENTENDI!</string>
+
+
+    <!--ACTIVITY CREATE TRIBU-->
+    <string name="info_tribus">Ao criar uma tribu, você se torna o Admin dela. Isso quer dizer que apenas você
+        pode realizar funções de gerenciamento da tribu, como aceitar novos participantes(se sua tribu não for pública) ou
+        editar as informações desta tribu.
+    </string>
+    <string name="info_unique_name_tribus">Toda tribu possui um nome único que será gerado automaticamente a partir do
+        nome que você escolher para sua tribu.
+    </string>
+    <string name="info_verify_first">Antes de ir para os próximos passos, você precisa verificar a diponibilidade do nome
+        que você escolheu para sua Tribu.
+    </string>
+    <string name="tematica_tribu">Temática:</string>
+    <string name="chose_thematic">Escolha uma temática:</string>
+    <string name="cadastrar_tribu">Criar Tribu</string>
+    <string name="nome_tribu">\@nome da tribu</string>
+    <string name="tv_unique_name_tribu">\@nome_unico_da_tribu</string>
+    <string name="title_choose">Escolha</string>
+    <string name="title_cancel">Cancelar</string>
+    <string name="title_camera">Câmera</string>
+    <string name="title_galery">Galeria</string>
+    <string name="character_length">/200</string>
+    <string name="toast_alert_tribu_name_empty">O campo NOME não pode estar vazio. Por favor, informe o nome da sua tribu.</string>
+    <string name="toast_alert_name">Por favor, informe um nome para a tribu.</string>
+    <string name="toast_error_tribu_name_empty">O campo de nome da tribu não pode ficar vazio.</string>
+    <string name="name_unavailable">Nome indisponível. Por favor, escolha outro.</string>
+    <string name="name_available">O nome escolhido está disponível.</string>
+    <string name="toast_error_tribu_description_empty">O campo de descrição da tribu não pode ficar vazio.</string>
+    <string name="toast_error_tribu_thematic_empty">Escolha uma opção de temática para sua tribu.</string>
+    <string name="tribu_created_successfully">Tribu criada com sucesso!</string>
+    <string name="toast_error_create_tribu">Houve um erro ao criar sua tribu.</string>
+    <string name="progress_message_creating_tribu">Aguarde enquanto sua tribu é criada…</string>
+    <string name="progress_message_verifying">Verificando a disponibilidade deste nome para sua tribu…</string>
+    <string name="about_unique_name">Sobre o nome único da tribu…</string>
+
+    <string-array name="tematicas">
+        <item>Escolha uma temática</item>
+        <item>Arte</item>
+        <item>Amizade</item>
+        <item>Cinema</item>
+        <item>Comunicação</item>
+        <item>Concursos Públicos</item>
+        <item>Dança</item>
+        <item>Diversão</item>
+        <item>Economia</item>
+        <item>Educação</item>
+        <item>Fotografia</item>
+        <item>Futebol</item>
+        <item>Gastronomia</item>
+        <item>Lazer</item>
+        <item>Meio Ambiente</item>
+        <item>Música</item>
+        <item>Política</item>
+        <item>Programação</item>
+        <item>Quadrinhos</item>
+        <item>Saúde</item>
+        <item>Séries</item>
+        <item>Sociedade</item>
+        <item>Trabalho</item>
+        <item>Tecnologia</item>
+        <item>Televisão</item>
+    </string-array>
+
+    <!--USER PROFILE ACTIVITY-->
+    <string name="hint_about_me">Atualize seu status…</string>
+    <string name="hint_gender">Informe seu gênero…</string>
+    <string name="hint_age">Informe sua data de nascimento…</string>
+    <string name="tv_info_permission">Habilitando este botão, qualquer usuário poderá adicionar você sem a necessidade de aprovação prévia.</string>
+    <string-array name="gender_update">
+        <item>Feminino</item>
+        <item>Masculino</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>Selecione o gênero</item>
+        <item>Feminino</item>
+        <item>Masculino</item>
+    </string-array>
+
+    <!--MAIN ACTIVITY ACTIVITY-->
+    <string name="pesquisar_tribus">Pesquisar Tribus</string>
+    <string name="nova_tribu">Nova Tribu</string>
+    <string name="criar_tribu">Deseja criar sua tribu?</string>
+
+    <!--DETAIL TALKER ACTIVITY-->
+    <string name="about">Sobre</string>
+    <string name="status_yet">ainda não atualizou seu status…</string>
+    <string name="gender_yet">ainda não informou seu gênero…</string>
+    <string name="age_yet">ainda não informou sua idade…</string>
+    <string name="i_have">Tenho</string>
+    <string name="years">anos</string>
+    <string name="toast_alert_invitation_sended">Convite enviado</string>
+    <string name="toast_erro_send_invitation">Houve um erro ao enviar o convite.</string>
+    <string name="remove_contact">Remover contato</string>
+    <string name="remove_contact_question">Deixar de ser contato de "</string>
+    <string name="contact_removed_successfully">Contato removido com sucesso!</string>
+    <string name="canceling_invitation">Aguarde enquanto seu convite é cancelado…</string>
+    <string name="cancel_invitation">Cancelar convite</string>
+    <string name="cancel_invitation_btn">CANCELAR CONVITE</string>
+    <string name="cancel_invitation_message">Não deseja mais ser contato de "</string>
+    <string name="invitation_canceled">Convite cancelado!</string>
+    <string name="toast_error_canceling_invitation">Houve um erro ao cancelar o convite.</string>
+    <string name="updates">Atualizações</string>
+    <string name="profile">Perfil</string>
+
+
+    <!--DETAIL ADD TALKER ACTIVITY-->
+    <string name="add_contact">Adicionar contato</string>
+    <string name="accept_invitation">Aceitar convite</string>
+    <string name="accept_contact">Adicionar "</string>
+    <string name="as_a_contact">" como contato?</string>
+    <string name="removing_invitation">Excluir convite de "</string>
+    <string name="dont_add_contact">Excluir convite</string>
+    <string name="yes">SIM</string>
+    <string name="no">NÃO</string>
+    <string name="toast_error_add_contact">Houve um erro ao adicionar o contato.</string>
+    <string name="toast_error_remove_invitation">Houve um erro ao excluir este convite.</string>
+    <string name="contact_added">Contato adicionado!</string>
+    <string name="invitation_removed">Convite excluído!</string>
+    <string name="refuse">Recusar</string>
+    <string name="accept">Aceitar</string>
+    <string name="from_tribu">Da tribu: </string>
+    <string name="more_than_one_contact">contatos</string>
+    <string name="one_contact">contato</string>
+    <string name="participating">participa de</string>
+    <string name="one_tribu">tribu</string>
+    <string name="more_than_one_tribu">tribus</string>
+    <string name="private_account">Esta conta é privada. Para visualizar essas informações, vocês precisam ser contato um do outro.</string>
+
+    <!--BLOCK USER ACTIVITY-->
+    <string name="your_contact_since">Seu contato desde</string>
+    <string name="no_contacts">Não há contatos no momento.</string>
+    <string name="toolbar_title">Remover contatos</string>
+
+    <!--ACTIVITY CHANGE ADMIN-->
+    <string name="replace_admin_toolbar">Substituir admin</string>
+    <string name="list_of_candidates">Escolha um dos participantes para ser o novo Admin desta tribu.</string>
+    <!--string name="list_of_candidates">Nesta lista aparecem apenas os participantes que não são admins de outras tribus.</string-->
+    <string name="participant_since">Participante desde</string>
+
+    <!--ACTIVITY PHONE NUMBER AUTHENTICATION-->
+    <string name="please_inform_your_phone">Por favor, informe seu número de telefone.</string>
+    <string name="please_inform_your_code">Por favor, informe o código enviado por SMS.</string>
+    <string name="tv_info_phone_number">Utilizamos seu número de telefone para validar seu cadastro no app. Os outros usuários não terão conhecimento do seu número.</string>
+
+    <!--DETAIL TRIBU ADD FOLLOWER ACTIVITY-->
+    <string name="no_followers">Não há participantes no momento.</string>
+    <string name="add_participants">Adicionar participantes</string>
+    <string name="add_participant">Adicionar participante</string>
+    <string name="dont_add_participants">Não adicionar participante</string>
+    <string name="removing_request">Remover solicitação de "</string>
+    <string name="accept_request">Aceitar solicitação de "</string>
+    <string name="toast_error_remove_request">Houve um erro ao remover esta solicitação.</string>
+    <string name="toast_error_accept_request">Houve um erro ao aceitar esta solicitação.</string>
+    <string name="toast_remove_request_successfully">Solicitação removida!</string>
+    <string name="toast_accept_request_successfully">"Participante adicionado!"</string>
+
+
+    <!--TOASTS-->
+    <string name="toast_user_removed">Contato removido com sucesso!</string>
+    <string name="toast_admin_replaced">Admin subtituído com sucesso!</string>
+    <string name="toast_error_remove_contact">Houve um erro ao remover o contato.</string>
+    <string name="toast_error_change_admin">Houve um erro substituir o admin.</string>
+
+    <!--DIALOGS-->
+    <string name="dialog_remove_talker_title">Remover conversa:</string>
+    <string name="dialog_remove_talker_message_part_1">Deixar de conversar com "</string>
+    <string name="dialog_remove_talker_message_part_2">"?</string>
+    <string name="positive_button_remove_user">SIM</string>
+    <string name="negative_button_remove_user">NÃO</string>
+    <string name="dialog_replace_admin_title_part_1">Tornar</string>
+    <string name="dialog_replace_admin_title_part_2">Admin desta tribu?</string>
+    <string name="dialog_replace_admin_message">Ao transferir a condição de Admin para outro usuário, você continua participando desta tribu, mas não poderá mais realizar ações próprias do Admin. Entretanto, você pode criar outra tribu e ser Admin dela.</string>
+    <string name="positive_button_replace_admin">ATUALIZAR ADMIN</string>
+    <string name="negative_button_replace_admin">CANCELAR</string>
+
+
+    <!--PROGRESS-->
+    <string name="progress_message_remove_user">Aguarde enquanto o contato é removido…</string>
+    <string name="progress_update_admin_title">Aguarde enquanto o admin é atualizado…</string>
+    <string name="help_developer">O Tribus procura desenvolvedores Android, com amplo conhecimento em Database RealTime, para auxiliar na evolução do aplicativo. Mais informações, participe da tribu do app e adicione a admin "'Desenvolvedora Tribus'".</string>
+    <string name="popup_menu_options">⋮</string>
+    <string name="icon_user_profile_edit">user profile edit</string>
+
+    <string-array name="tribus_options">
+        <item>Tribus adicionadas</item>
+        <item>Tribus removidas</item>
+        <item>Tribus encerradas</item>
+    </string-array>
+
+
+    <!--FEATURE CHOICE ACTIVITY-->
+    <!--activity-->
+    <string name="progress_message_leave_tribu">Saindo da tribu</string>
+    <string name="leave_tribu">Deixar tribu</string>
+    <string name="leave_tribu_message">Deixar tribu</string>
+    <string name="toast_error_leave_tribu">Houve um erro ao deixar esta tribu.</string>
+    <string name="toast_leave_tribu_successfully">Você deixou a tribu</string>
+    <string name="toast_error_creating_topic">Houve um erro ao criar este tópico.</string>
+    <string name="creating_topic">Criando tópico…</string>
+    <string name="topic_created">Tópico criado!</string>
+    <string name="topic_characters_length">/50</string>
+    <string name="toast_alert_empty_survey_question">Por favor, digite sua pergunta para criar uma nova enquete.</string>
+    <string name="toast_alert_empty_topic_subject">Por favor, informe o assunto do tópico.</string>
+
+    <!--fragment feature-->
+    <string name="topics">Tópicos (</string>
+    <string name="surveys">Enquetes (</string>
+    <string name="events">Eventos (0)</string>
+    <string name="campaigns">Campanhas (0)</string>
+    <string name="shared_media">Mídia compartilhada(0)</string>
+    <string name="touch_to_add">Toque para adicionar</string>
+    <string name="more_than_one_participant">participantes à sua tribu.</string>
+    <string name="one_participant">participante à sua tribu.</string>
+    <string name="no_new_participant">Não há novos participantes para sua tribu.</string>
+
+    <!--fragment container topics-->
+    <string name="btn_save_edition_topic">SALVAR</string>
+    <string name="btn_cancel_edition_topic">CANCELAR</string>
+    <string name="hint_edition_topic_dialog">Editar tópico…</string>
+    <string name="character_count_edition_topic_dialog">0/50</string>
+    <string name="character_count">/50</string>
+    <string name="toast_alert_empty_subject">Por favor, informe o assunto do tópico.</string>
+    <string name="toast_no_topic_update">Nenhuma alteração foi realizada.</string>
+    <string name="toast_error_update_topic">Houve um erro ao atualizar o tópico</string>
+    <string name="toast_update_topic_successfully">Tópico atualizado!</string>
+    <string name="progress_updating_topic">Atualizando edição…</string>
+    <string name="no_topics">Não há tópicos no momento.</string>
+
+    <!--fragment container topics-->
+    <string name="survey_from">ENQUETE de</string>
+    <string name="progress_vote_survey">Aguarde enquanto seu voto é registrado…</string>
+    <string name="toast_error_registering_vote">Houve um erro ao registrar seu voto.</string>
+    <string name="toast_vote_registered_successfully">Voto registrado com sucesso!</string>
+    <string name="more_than_one_vote">votos)</string>
+    <string name="one_vote">voto)</string>
+    <string name="percent">%</string>
+    <string name="by">por</string>
+    <string name="no_surveys">Não há enquetes no momento.</string>
+
+    <!--INVITATION REQUEST TRIBU-->
+    <string name="progress_message_cancel_invitation">Aguarde enquanto sua solicitação é cancelada…</string>
+    <string name="cancel_tribu_request">Cancelar solicitação</string>
+    <string name="cancel_tribu_request_question">Deseja cancelar solicitação para participar da tribu</string>
+    <string name="btn_cancel_request">CANCELAR SOLICITAÇÃO</string>
+    <string name="toast_cancel_request_successfully">Solicitação cancelada!</string>
+    <string name="toast_error_cancel_request">Houve um erro ao cancelar sua solicitação</string>
+    <string name="no_request">Não há solicitação para seguir uma tribu.</string>
+
+    <!--INVITATION REQUEST USER-->
+    <string name="progress_message_cancel_invitation_user">Aguarde enquanto seu convite é cancelado…</string>
+    <string name="no_request_user">Não há convites no momentos.</string>
+    <string name="arrow_back">arrow_back</string>
+
+</resources>

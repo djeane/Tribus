@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorIcons">
+
+    <RelativeLayout
+        android:id="@+id/relative_talks_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_talks_category"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:layout_centerVertical="true"
+            android:background="@color/colorIcons"
+            android:orientation="horizontal"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_list_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_talks_category">
+
+        <LinearLayout
+            android:id="@+id/linear_options"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:baselineAligned="false"
+            android:background="@color/colorIcons"
+            android:paddingTop="10dp">
+            <!--android:background="@drawable/button_thematics"-->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_talks_messages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="center"
+                    android:text="Contatos"
+                    android:textColor="@color/accent"
+                    android:textSize="14sp"
+                    android:background="@color/transparent"
+                    android:textAllCaps="false"
+                    android:textStyle="italic"
+                    android:layout_gravity="center_horizontal"/>
+
+                <View
+                    android:id="@+id/view_talks_messages"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/accent" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_talks_updates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="29dp"
+                    android:fontFamily="@font/nunito"
+                    android:gravity="center"
+                    android:text="Atualizações"
+                    android:textColor="@color/primary_light"
+                    android:textSize="14sp"
+                    android:background="@color/transparent"
+                    android:textAllCaps="false"
+                    android:textStyle="italic"
+                    android:layout_gravity="center_horizontal"/>
+
+                <View
+                    android:id="@+id/view_talks_updates"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorIcons"
+                    android:visibility="visible"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <!--ADDDED CONTACTS-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_talks_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_list_options"
+        android:background="@color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_talks_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <!--REMOVE CONTACTS-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_talks_fragment_remove_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_talks_category"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_talks_fragment_remove_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_remove_contacts"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <!--CONTACTS INVITATIONS-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_talks_fragment_contacts_invitations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_talks_category"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_talks_fragment_contacts_invitations"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_contacts_invitations"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--CONTACTS REQUESTS-->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/layout_talks_fragment_contacts_requests"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relative_talks_category"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list_talks_fragment_contacts_requests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorIcons"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_contacts_requests"
+            style="@style/Base.Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar_bottom"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:padding="4dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/relative_no_contacts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/relative_talks_category"
+        android:background="@color/colorIcons">
+
+        <TextView
+        android:id="@+id/tv_no_contact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/primary_dark"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--OLD CODE-->
+<!--android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_talks_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorIcons"
+    tools:context="apptribus.com.tribus.activities.main_activity.MainActivity">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list_talks_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorIcons"
+        android:scrollbars="none"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT--><!--android.support.design.widget.CoordinatorLayout
+    android:id="@+id/layout_tribus_fragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_list_talks_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorIcons"
+        android:scrollbars="vertical">
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.design.widget.CoordinatorLayout-->

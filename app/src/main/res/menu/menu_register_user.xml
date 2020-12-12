@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_privacy_policy_register_user"
+        android:title="Política de privacidade do Tribus"
+        app:showAsAction="never"/>
+
+</menu>

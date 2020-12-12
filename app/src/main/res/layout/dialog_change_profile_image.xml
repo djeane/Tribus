@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sd_large_image_user"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:fitsSystemWindows="true"
+        app:layout_collapseMode="parallax"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@color/colorPrimaryDark"
+        fresco:placeholderImage="@color/colorIcons"
+        fresco:retryImage="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:text="Cancelar"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_change_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:text="Mudar foto"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingEnd="16dp"
+    android:paddingTop="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="2dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/circle_image_of_participant"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:failureImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:placeholderImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:retryImage="@drawable/ic_placeholder_user_primary_light"
+        fresco:roundAsCircle="true"
+        fresco:roundingBorderColor="@color/colorIcons"
+        fresco:roundingBorderWidth="0dp" />
+
+    <RelativeLayout
+        android:id="@+id/relative_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:background="@drawable/row_tribus"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:id="@+id/textViewOptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="4dp"
+            android:paddingEnd="8dp"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:text="@string/popup_menu_options"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@color/primary_text"
+            android:visibility="invisible"
+            android:background="?attr/selectableItemBackground"/>
+
+
+        <LinearLayout
+            android:id="@+id/linear_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:bufferType="spannable"
+                android:fontFamily="@font/nunito"
+                android:linksClickable="true"
+                android:maxLines="2"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:visibility="visible"
+                />
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_gravity="top"
+                android:background="@color/primary_light"
+                android:visibility="visible"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/nunito"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textColor="@color/primary_text"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_marginStart="24dp"
+            android:layout_below="@+id/linear_username"/>
+
+
+
+        <TextView
+            android:id="@+id/topic_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_name"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/nunito"
+            android:paddingBottom="4dp"
+            android:singleLine="true"
+            android:textAlignment="textStart"
+            android:textSize="12sp"/>
+
+
+    </RelativeLayout>
+</RelativeLayout>
+
+
+    <!--RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_root">
+
+        <RelativeLayout
+            android:id="@+id/relative_text_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorIcons"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/circle_image_of_admin"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="207dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:failureImage="@color/colorPrimaryDark"
+                fresco:placeholderImage="@color/colorIcons"
+                fresco:retryImage="@color/colorPrimaryLight"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/colorIcons"
+                fresco:roundingBorderWidth="6dp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linear_username">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:fontFamily="@font/nunito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textSize="14sp"
+                android:visibility="visible"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold"
+                android:text="njvjvjnvjnjnjv nngjngjnjgnjgnjgnjgnj ng ng"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="top"
+                android:background="@color/primary_light"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_username"
+                android:bufferType="spannable"
+                android:linksClickable="true"
+                android:textAlignment="viewStart"
+                android:fontFamily="@font/nunito"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:visibility="visible"
+                android:maxLines="2"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"
+                android:text="ggughughughughuhguhg  jnnn uhu g nf"/>
+
+            <RelativeLayout
+                android:id="@+id/relative_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_topic"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:layout_alignParentEnd="true">
+
+
+                <TextView
+                    android:id="@+id/topic_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:singleLine="true"
+                    android:fontFamily="@font/nunito"
+                    android:textAlignment="textStart"
+                    android:textSize="12sp"
+                    android:text="vnvnvnjvnvjnvjnfnjfnjn"/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shadow_dialog"
+            android:layout_below="@+id/relative_text_topic"
+    />
+    </RelativeLayout -->

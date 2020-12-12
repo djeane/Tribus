@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorIcons"
+    tools:context="apptribus.com.tribus.activities.create_tribu.CreateTribuActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <android.support.v7.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/toolbar_register_user"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent">
+
+                <ImageView
+                    android:id="@+id/arrow_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ripple_effect_arrow_buttom"
+                    android:src="@drawable/ic_arrow_back" />
+
+                <TextView
+                    android:id="@+id/tv_register_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="24dp"
+                    android:layout_toEndOf="@+id/arrow_back"
+                    android:text="Criar tribu"
+                    android:textColor="@color/colorIcons"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito"/>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/relative_create_tribu"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:paddingBottom="24dp"
+            tools:context=".activities.create_tribu.CreateTribuActivity">
+
+            <!--TextView
+                android:id="@+id/tv_info_verify"
+                android:background="@drawable/tv_info_check_username"
+                android:padding="10dp"
+                android:textColor="@color/primary_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Antes de ir para os próximos passos, você precisa verificar a diponibilidade do nome que você escolheu para sua Tribu."
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_below="@+id/relativelayout"/-->
+
+            <RelativeLayout
+                android:id="@+id/relativelayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp">
+
+                <FrameLayout
+                    android:id="@+id/frame_buttons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/ci_verify_tribu_name"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="4dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_action_verify"
+                        android:visibility="visible"
+                        app:backgroundTint="@android:color/white"
+                        app:fabSize="mini" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:id="@+id/ci_done"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_action_done"
+                        app:backgroundTint="@android:color/white"
+                        android:visibility="gone"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        app:fabSize="mini" />
+
+                </FrameLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_label_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                    android:layout_toStartOf="@+id/ci_clear_text"
+                    android:layout_toEndOf="@id/frame_buttons"
+                    android:layout_marginStart="8dp"
+                    android:paddingTop="4dp"
+                    >
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/et_name_tribu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nome da tribu..."
+                        android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                        android:maxLength="150"
+                        android:scrollbars="vertical|none"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:id="@+id/ci_clear_text"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:src="@drawable/ic_action_clear_text"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/relativelayout"
+                android:id="@+id/linear_username">
+
+                <TextView
+                    android:id="@+id/tv_unique_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/tv_unique_name_tribu"
+                    android:textColorHint="@color/accent"
+                    android:padding="4dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    android:fontFamily="@font/nunito"/>
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/iv_help"
+                    android:src="@drawable/ic_help"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ripple_effect_arrow_buttom"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relative_image"
+                android:gravity="center_horizontal"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp"
+                android:layout_below="@+id/linear_username"
+                android:layout_marginTop="16dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sd_image_tribu"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                fresco:placeholderImage="@drawable/ic_add_user_photo"
+                fresco:failureImageScaleType="focusCrop"
+                fresco:placeholderImageScaleType="centerInside"
+                fresco:retryImageScaleType="centerCrop"
+                fresco:failureImage="@color/colorPrimaryDark"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:visibility="visible"
+                fresco:roundAsCircle="true"
+                fresco:backgroundImage="@color/colorIcons"
+                fresco:roundedCornerRadius="8dp"
+                fresco:roundingBorderColor="@color/colorPrimary"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundWithOverlayColor="@color/primary_light" />
+
+
+                <!--fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="8dp"
+                fresco:roundingBorderColor="@color/colorPrimary"
+                fresco:roundingBorderWidth="1dp"-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/sd_image_tribu"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="4dp"
+                    android:text="Toque para fornecer uma foto da tribu."
+                    android:textStyle="italic"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/nunito"/>
+
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_label_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:layout_below="@+id/relative_image">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_description_tribu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descreva sua tribu..."
+                    android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                    android:maxLength="200"
+                    android:textColorHint="@color/colorPrimaryDark"
+                    android:scrollbars="vertical|none"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_character_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/200"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/til_label_description"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/nunito"/>
+
+            <Spinner
+                android:id="@+id/sp_thematic_tribu"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/tv_character_count"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv_question_isPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:text="Tribu Pública?"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_below="@+id/sp_thematic_tribu"
+                android:layout_marginStart="16dp"
+                android:paddingStart="2dp"
+                android:fontFamily="@font/nunito"/>
+
+            <ToggleButton
+                android:id="@+id/tb_isPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Não"
+                android:textOn="Sim"
+                android:layout_alignBaseline="@+id/tv_question_isPublic"
+                android:layout_toEndOf="@+id/tv_question_isPublic"
+                android:background="?attr/selectableItemBackground"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_info_toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ao habilitar este botão, você permite que qualquer usuário faça parte de sua tribu, sem a necessidade de aprovação."
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:background="@drawable/tv_border_is_restrict"
+                android:layout_below="@+id/tb_isPublic"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/nunito"/>
+
+
+            <TextView
+                android:id="@+id/tv_info_tribu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:text="@string/info_tribus"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:layout_below="@+id/tv_info_toggleButton"
+                android:background="@drawable/tv_info_check_username"
+                android:layout_marginBottom="24dp"/>
+
+            <Button
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/cadastrar_tribu"
+                android:layout_below="@+id/tv_info_tribu"
+                android:textSize="16sp"
+                android:textColor="@color/colorIcons"
+                android:background="@drawable/button_check_username"
+                android:fontFamily="@font/nunito"/>
+
+            <TextView
+                android:id="@+id/tv_link_new_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@+id/btn_create"
+                android:layout_marginTop="8dp"
+                android:padding="8dp"
+                android:text="Saiba mais sobre criar uma tribu!"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_alignParentBottom="true"
+                android:background="?attr/selectableItemBackground"
+                android:fontFamily="@font/nunito"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+
+
+    <!--ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorIcons"
+        android:layout_height="match_parent"
+        tools:context="apptribus.com.tribus.activities.create_tribu.CreateTribuActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            tools:context=".activities.check_username.CheckUsernameActivity">
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/AppTheme.AppBarOverlay" >
+
+
+            <include
+                layout="@layout/toolbar_create_tribu"/>
+            </android.support.design.widget.AppBarLayout>
+
+
+            <TextView
+                android:id="@+id/tv_info_verify"
+                android:background="@drawable/tv_info_check_username"
+                android:padding="10dp"
+                android:textColor="@color/primary_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Antes de ir para os próximos passos, você precisa verificar a diponibilidade do nome que você escolheu para sua Tribu."
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_below="@+id/sd_image_tribu"/>
+
+                <RelativeLayout
+                    android:id="@+id/relativelayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorIcons"
+                    android:padding="6dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_below="@+id/tv_info_verify"
+                    android:layout_marginTop="8dp">
+
+                    <FrameLayout
+                        android:id="@+id/frame_buttons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentStart="true">
+
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/ci_verify_tribu_name"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="4dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:src="@drawable/ic_action_verify"
+                            android:visibility="visible"
+                            app:backgroundTint="@android:color/white"
+                            app:fabSize="mini"/>
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/ci_done"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="?attr/selectableItemBackground"
+                            android:src="@drawable/ic_action_done"
+                            app:backgroundTint="@android:color/white"
+                            android:visibility="gone"
+                            android:layout_margin="4dp"
+                            app:fabSize="mini" />
+
+                    </FrameLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_label_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorPrimaryDark"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                        android:layout_toStartOf="@+id/ci_clear_text"
+                        android:layout_toEndOf="@id/frame_buttons"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp">
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/et_name_tribu"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Nome da mTribu..."
+                            android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                            android:maxLength="150"
+                            android:scrollbars="vertical|none"
+                            android:textSize="16sp" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/ci_clear_text"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="?attr/selectableItemBackground"
+                        android:src="@drawable/ic_action_clear_text"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_unique_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="2dp"
+                android:text="@string/tv_unique_name_tribu"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_below="@+id/relativelayout"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sd_image_tribu"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="300"
+                fresco:failureImage="@color/colorPrimaryDark"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@color/colorIcons"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:progressBarAutoRotateInterval="3000"
+                fresco:progressBarImage="@drawable/ic_action_progress"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:retryImage="@color/colorAccent"
+                fresco:retryImageScaleType="centerCrop"
+                fresco:roundAsCircle="true"
+                fresco:roundedCornerRadius="8dp"
+                fresco:roundingBorderColor="@color/primary_light"
+                fresco:roundingBorderWidth="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/appbar"
+                android:visibility="visible"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_label_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorPrimaryDark"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_below="@+id/tv_unique_name">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/et_description_tribu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Descreva sua mTribu..."
+                    android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                    android:maxLength="200"
+                    android:scrollbars="vertical|none"
+                    android:textSize="16sp" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_character_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0/200"
+                android:padding="10dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_below="@+id/til_label_description"
+                android:textAlignment="textEnd"/>
+
+            <Spinner
+                android:id="@+id/sp_thematic_tribu"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_below="@+id/tv_character_count"/>
+
+            <TextView
+                android:id="@+id/tv_question_isPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Tribu Pública?"
+                android:textAlignment="center"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_info_verify"
+                android:layout_below="@+id/sp_thematic_tribu"
+                android:textSize="18sp"
+                android:textColor="@color/primary_text"/>
+
+            <ToggleButton
+                android:id="@+id/tb_isPublic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOff="Não"
+                android:textOn="Sim"
+                android:layout_alignBaseline="@+id/tv_question_isPublic"
+                android:layout_alignBottom="@+id/tv_question_isPublic"
+                android:layout_toEndOf="@+id/tv_question_isPublic" />
+
+            <TextView
+                android:id="@+id/tv_info_toggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ao habilitar este botão, você permite que qualquer usuário faça parte de sua mTribu, sem a necessidade de aprovação."
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textSize="16sp"
+                android:background="@drawable/tv_border_is_restrict"
+                android:layout_below="@+id/tb_isPublic"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"/>
+
+
+            <TextView
+                android:id="@+id/tv_info_tribu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:padding="5dp"
+                android:textSize="16sp"
+                android:text="@string/info_tribus"
+                android:textAlignment="center"
+                android:layout_below="@+id/tv_info_toggleButton"
+                android:background="@drawable/tv_info_check_username"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btn_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/cadastrar_tribu"
+                android:layout_below="@+id/tv_info_tribu"
+                android:textSize="16sp"
+                android:textColor="@color/colorIcons"
+                android:background="@drawable/button_check_username"/>
+
+        </RelativeLayout>
+
+    </ScrollView-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT AGAIN-->
+<!--ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="apptribus.com.tribus.activities.create_tribu.CreateTribuActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="?attr/colorAccent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/ToolbarTextAppearance.Title" />
+
+
+        <EditText
+            android:id="@+id/et_description_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="*Descreva sua mTribu"
+            android:maxLength="200"
+            android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sd_image_tribu" />
+
+        <TextView
+            android:id="@+id/tv_label_thematic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:labelFor="@+id/sp_thematic_tribu"
+            android:text="@string/tematica_tribu"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_description_tribu" />
+
+        <Spinner
+            android:id="@+id/sp_thematic_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_thematic" />
+
+
+        <TextView
+            android:id="@+id/tv_info_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:lines="4"
+            android:padding="2dp"
+            android:text="@string/info_tribus"
+            android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_thematic_tribu" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_image_tribu"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@color/colorIcons"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:progressBarAutoRotateInterval="3000"
+            fresco:progressBarImage="@drawable/ic_action_progress"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:retryImage="@color/colorAccent"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="8dp"
+            fresco:roundingBorderColor="@color/colorPrimaryDark"
+            fresco:roundingBorderWidth="1dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_toggleButton"
+            app:layout_constraintHorizontal_bias="0.416" />
+
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/cadastrar_tribu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_tribu" />
+
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/coordinatorLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unique_name">
+
+            <ImageButton
+                android:id="@+id/ci_verify_tribu_name"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_action_verify"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <ImageButton
+                android:id="@+id/ci_done"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="8dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_action_done"
+                android:visibility="invisible"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="8dp"/>
+        </android.support.design.widget.CoordinatorLayout>
+
+        <EditText
+            android:id="@+id/et_name_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:hint="Nome de sua mTribu"
+            android:inputType="textAutoCorrect|textCapWords"
+            android:textAlignment="textStart"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/coordinatorLayout"
+            app:layout_constraintRight_toLeftOf="@+id/ci_clear_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unique_name" />
+
+
+        <ImageButton
+            android:id="@+id/ci_clear_text"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginEnd="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_action_clear_text"
+            android:visibility="visible"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unique_name" />
+
+        <TextView
+            android:id="@+id/tv_unique_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:hint="@string/nome_tribu"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_info_verify"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/tv_info_check_username"
+            android:padding="10dp"
+            android:textColor="@color/primary_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Antes de ir para os próximos passos, você precisa verificar a diponibilidade do nome que você escolheu para sua Tribu."
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name_tribu"
+            app:layout_constraintHorizontal_bias="1.0"/>
+
+
+        <TextView
+            android:id="@+id/tv_question_isPublic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Tribu Pública?"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_verify"
+            android:layout_marginLeft="16dp" />
+
+        <ToggleButton
+            android:id="@+id/tb_isPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Não"
+            android:textOn="Sim"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_verify"
+            app:layout_constraintLeft_toRightOf="@+id/tv_question_isPublic"
+            android:layout_marginLeft="13dp" />
+
+        <TextView
+            android:id="@+id/tv_info_toggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Ao habilitar este botão, você permite que qualquer usuário faça parte de sua mTribu, sem a necessidade de aprovação."
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb_isPublic" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--OLD LAYOUT-->
+<!--ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="apptribus.com.tribus.activities.create_tribu.CreateTribuActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="241dp" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="?attr/colorAccent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/ToolbarTextAppearance.Title" />
+
+
+        <EditText
+            android:id="@+id/et_description_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="*Descreva sua mTribu"
+            android:maxLength="200"
+            android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sd_image_tribu" />
+
+        <TextView
+            android:id="@+id/tv_label_thematic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:labelFor="@+id/sp_thematic_tribu"
+            android:text="@string/tematica_tribu"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_description_tribu" />
+
+        <Spinner
+            android:id="@+id/sp_thematic_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_label_thematic" />
+
+
+        <TextView
+            android:id="@+id/tv_info_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:lines="4"
+            android:padding="2dp"
+            android:text="@string/info_tribus"
+            android:textAlignment="center"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sp_thematic_tribu" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sd_image_tribu"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            fresco:actualImageScaleType="centerCrop"
+            fresco:fadeDuration="300"
+            fresco:failureImage="@color/colorPrimaryDark"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@color/colorIcons"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:progressBarAutoRotateInterval="3000"
+            fresco:progressBarImage="@drawable/ic_action_progress"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:retryImage="@color/colorAccent"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:roundAsCircle="false"
+            fresco:roundBottomLeft="true"
+            fresco:roundBottomRight="true"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="true"
+            fresco:roundedCornerRadius="8dp"
+            fresco:roundingBorderColor="@color/colorPrimaryDark"
+            fresco:roundingBorderWidth="1dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_toggleButton"
+            app:layout_constraintHorizontal_bias="0.416" />
+
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/cadastrar_tribu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_tribu" />
+
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unique_name">
+
+    <ImageButton
+        android:id="@+id/ci_verify_tribu_name"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_action_verify"
+        tools:layout_editor_absoluteY="8dp" />
+
+    <ImageButton
+        android:id="@+id/ci_done"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_action_done"
+        android:visibility="invisible"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="8dp"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+        <EditText
+            android:id="@+id/et_name_tribu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="8dp"
+            android:hint="Nome de sua mTribu"
+            android:inputType="textAutoCorrect|textCapWords"
+            android:textAlignment="textStart"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/coordinatorLayout"
+            app:layout_constraintRight_toLeftOf="@+id/ci_clear_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_unique_name" />
+
+
+    <ImageButton
+        android:id="@+id/ci_clear_text"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="start"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_action_clear_text"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unique_name" />
+
+        <TextView
+            android:id="@+id/tv_unique_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
+            android:hint="@string/nome_tribu"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_info_verify"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Antes de ir para os próximos passos, você precisa verificar a diponibilidade do nome que você escolheu para sua Tribu."
+            android:textAlignment="center"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_name_tribu"
+            app:layout_constraintHorizontal_bias="1.0" />
+
+        <TextView
+            android:id="@+id/tv_question_isPublic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="Tribu Pública?"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_verify"
+            android:layout_marginLeft="16dp" />
+
+        <ToggleButton
+            android:id="@+id/tb_isPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="Não"
+            android:textOn="Sim"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_verify"
+            app:layout_constraintLeft_toRightOf="@+id/tv_question_isPublic"
+            android:layout_marginLeft="13dp" />
+
+        <TextView
+            android:id="@+id/tv_info_toggleButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Ao habilitar este botão, você permite que qualquer usuário faça parte de sua mTribu, sem a necessidade de aprovação."
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tb_isPublic" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView-->

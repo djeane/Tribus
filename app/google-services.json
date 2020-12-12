@@ -1,0 +1,66 @@
+{
+  "project_info": {
+    "project_number": "888574820421",
+    "firebase_url": "https://tribus-9058d.firebaseio.com",
+    "project_id": "tribus-9058d",
+    "storage_bucket": "tribus-9058d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888574820421:android:65a251661994e370",
+        "android_client_info": {
+          "package_name": "apptribus.com.tribus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888574820421-k9h2v48kq9b6rfm3v4csliqalms4avea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apptribus.com.tribus",
+            "certificate_hash": "96c278e33db32cf94a619bb32c08b754188fb343"
+          }
+        },
+        {
+          "client_id": "888574820421-ikae85t5ab0qva4rsnmj8p5p3tl9q03b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "apptribus.com.tribus",
+            "certificate_hash": "60290d5a8a32a6fd94208201a87a39479d8cc1a9"
+          }
+        },
+        {
+          "client_id": "888574820421-6lkqh0ucb20tbbr0kh46g6uofn4ps0jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJCimZy-tj2LJA-JEJtYr3ZNCSxNfCVAY"
+        },
+        {
+          "current_key": "AIzaSyAOouNee0ojzteB2HcBxdQ30GGd9glph9o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888574820421-6lkqh0ucb20tbbr0kh46g6uofn4ps0jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

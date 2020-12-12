@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="apptribus.com.tribus.activities.survey.SurveyActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/appBarLayout">
+
+        <include
+            android:id="@+id/toolbar_survey"
+            layout="@layout/toolbar_survey"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="@color/colorIcons"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/linear_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_answers_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Opções de resposta"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/primary_text"
+            android:textAlignment="center"
+            android:textStyle="bold"/>
+
+            <View
+                android:id="@+id/viewName"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primary_dark" />
+
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_label_answer_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/linear_options"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Informe a 1ª opção de resposta..."
+                android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                android:maxLength="50"
+                android:fontFamily="@font/nunito"
+                android:scrollbars="vertical|none"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_label_answer_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_below="@+id/til_label_answer_one"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_question_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Informe a 2ª opção de resposta..."
+                android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                android:maxLength="50"
+                android:fontFamily="@font/nunito"
+                android:scrollbars="vertical|none"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_label_answer_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_below="@+id/til_label_answer_two"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_question_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Informe a 3ª opção de resposta..."
+                android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                android:maxLength="50"
+                android:fontFamily="@font/nunito"
+                android:scrollbars="vertical|none"
+                android:textSize="16sp"
+                android:visibility="visible"
+                android:textColor="@color/primary_text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_label_answer_four"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_below="@+id/til_label_answer_three"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_question_four"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Informe a 4ª opção de resposta..."
+                android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                android:maxLength="50"
+                android:fontFamily="@font/nunito"
+                android:scrollbars="vertical|none"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til_label_answer_five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone"
+            android:layout_below="@+id/til_label_answer_four"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/et_question_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Informe a 5ª opção de resposta..."
+                android:inputType="textMultiLine|textAutoCorrect|textAutoComplete|textCapSentences"
+                android:maxLength="50"
+                android:fontFamily="@font/nunito"
+                android:scrollbars="vertical|none"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tv_add_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" + opções de resposta"
+            android:textSize="16sp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@+id/til_label_answer_five"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="textEnd"
+            android:enabled="true"/>
+
+        <TextView
+            android:id="@+id/tv_limit_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Toque para definir data para encerramento da enquete"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/tv_border_is_public"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_below="@+id/tv_add_options"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_create_survey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_limit_date"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_thematics"
+            android:elevation="4dp"
+            android:text="Criar enquete"
+            android:textColor="@color/primary_dark"
+            android:textSize="16sp"
+            android:fontFamily="@font/nunito"/>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

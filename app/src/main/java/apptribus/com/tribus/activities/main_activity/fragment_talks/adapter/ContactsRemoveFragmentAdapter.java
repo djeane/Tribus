@@ -1,0 +1,289 @@
+package apptribus.com.tribus.activities.main_activity.fragment_talks.adapter;
+
+import android.content.Context;
+import android.graphics.drawable.Animatable;
+import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.facebook.drawee.backends.pipeline.Fresco;
+import com.facebook.drawee.controller.BaseControllerListener;
+import com.facebook.drawee.controller.ControllerListener;
+import com.facebook.drawee.interfaces.DraweeController;
+import com.facebook.drawee.view.SimpleDraweeView;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
+
+import apptribus.com.tribus.R;
+import apptribus.com.tribus.activities.block_user.adapter.BlockUserAdapter;
+import apptribus.com.tribus.activities.block_user.mvp.BlockUserView;
+import apptribus.com.tribus.activities.main_activity.fragment_talks.mvp.TalksFragmentPresenter;
+import apptribus.com.tribus.activities.main_activity.fragment_talks.mvp.TalksFragmentView;
+import apptribus.com.tribus.pojo.Talk;
+import apptribus.com.tribus.pojo.User;
+import apptribus.com.tribus.util.ShowSnackBarInfoInternet;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
+import static apptribus.com.tribus.util.Constantes.GENERAL_USERS;
+
+public class ContactsRemoveFragmentAdapter extends RecyclerView.Adapter<ContactsRemoveFragmentAdapter.ContactsRemoveViewHolder>{
+
+    private Context mContext;
+    private List<Talk> mContactsList;
+    private TalksFragmentView mView;
+    private OnBlockUserAdapterListener mOnBlockUserAdapterListener;
+
+    public ContactsRemoveFragmentAdapter(Context context, List<Talk> contactsList, TalksFragmentView view,
+                                         TalksFragmentPresenter presenter){
+        this.mContext = context;
+        this.mContactsList = contactsList;
+        this.mView = view;
+        if (presenter != null){
+            mOnBlockUserAdapterListener = presenter;
+        }
+    }
+
+
+    @NonNull
+    @Override
+    public ContactsRemoveViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_block_talkers, parent, false);
+
+        return new ContactsRemoveViewHolder(view);
+
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ContactsRemoveViewHolder holder, int position) {
+        Talk contact = mContactsList.get(position);
+
+        holder.initViewHolder(contact);
+    }
+
+    @Override
+    public int getItemCount() {
+        return mContactsList.size();
+    }
+
+
+    public class ContactsRemoveViewHolder extends RecyclerView.ViewHolder{
+
+        private Context mContext;
+
+        @BindView(R.id.constraint_layout)
+        ConstraintLayout mConstraintLayout;
+
+        @BindView(R.id.card_block_talkers)
+        public CardView mCardBlockTalkers;
+
+        @BindView(R.id.circle_image_of_talker)
+        public SimpleDraweeView mImageTalkers;
+
+        @BindView(R.id.tv_name_of_talker)
+        public TextView mTvTalkersName;
+
+        @BindView(R.id.tv_username_talker)
+        public TextView mTvUsernameTalkers;
+
+        @BindView(R.id.tv_talker_since)
+        public TextView mTvTalkerSince;
+
+        @BindView(R.id.btn_remove_talker)
+        public Button mBtnRemoveTalker;
+
+        //FIRESTORE INSTANCE
+        private FirebaseFirestore mFirestore;
+
+
+        //FIRESTORE COLLECTIONS REFERENCES
+        private CollectionReference mUsersCollection;
+
+
+        public ContactsRemoveViewHolder(View itemView) {
+            super(itemView);
+            mContext = itemView.getContext();
+            ButterKnife.bind(this, itemView);
+
+            mImageTalkers.bringToFront();
+            mConstraintLayout.invalidate();
+
+            mFirestore = FirebaseFirestore.getInstance();
+            mUsersCollection = mFirestore.collection(GENERAL_USERS);
+
+        }
+
+    private void setImageTalker(String url){
+
+        ControllerListener listener = new BaseControllerListener() {
+            @Override
+            public void onFailure(String id, Throwable throwable) {
+                super.onFailure(id, throwable);
+                //Log.d("Valor: ", "onFailure - id: " + id + "throwable: " + throwable);
+            }
+
+            @Override
+            public void onIntermediateImageFailed(String id, Throwable throwable) {
+                super.onIntermediateImageFailed(id, throwable);
+                //Log.d("Valor: ", "onIntermediateImageFailed - id: " + id + "throwable: " + throwable);
+            }
+
+            @Override
+            public void onFinalImageSet(String id, Object imageInfo, Animatable animatable) {
+                super.onFinalImageSet(id, imageInfo, animatable);
+                //Log.d("Valor: ", "onFinalImageSet - id: " + id + "imageInfo: " + imageInfo + "animatable: " + animatable);
+            }
+
+            @Override
+            public void onIntermediateImageSet(String id, Object imageInfo) {
+                super.onIntermediateImageSet(id, imageInfo);
+                //Log.d("Valor: ", "onIntermediateImageSet - id: " + id + "imageInfo: " + imageInfo);
+            }
+
+            @Override
+            public void onRelease(String id) {
+                super.onRelease(id);
+                //Log.d("Valor: ", "onRelease - id: " + id);
+            }
+
+            @Override
+            public void onSubmit(String id, Object callerContext) {
+                super.onSubmit(id, callerContext);
+                //Log.d("Valor: ", "onSubmit - id: " + id + "callerContext: " + callerContext);
+            }
+        };
+
+        //SCRIPT - LARGURA DA IMAGEM
+        //int w = 0;
+        /*if (holder.mImageTribu.getLayoutParams().width == FrameLayout.LayoutParams.MATCH_PARENT
+                || holder.mImageTribu.getLayoutParams().width == FrameLayout.LayoutParams.WRAP_CONTENT) {
+
+            Display display = ((MainActivity) mContext).getWindowManager().getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+
+            try {
+                w = size.x;
+                Log.d("Valor: ", "Valor da largura(w) em onStart(FragmentPesquisarTribu): " + w);
+
+            } catch (Exception e) {
+                w = display.getWidth();
+                e.printStackTrace();
+            }
+        }*/
+
+        Uri uri = Uri.parse(url);
+        DraweeController dc = Fresco.newDraweeControllerBuilder()
+                .setUri(uri)
+                .setControllerListener(listener)
+                .setOldController(mImageTalkers.getController())
+                .build();
+        mImageTalkers.setController(dc);
+
+    }
+
+    //set username
+    private void setTvUsernameTalkers(String usernameTalkers){
+        mTvUsernameTalkers.setText(usernameTalkers);
+    }
+
+    //set Talker's name
+    private void setTvTalkersName(String talkersName){
+        mTvTalkersName.setText(talkersName);
+    }
+
+        private void setDate(Date date){
+            SimpleDateFormat sfd = new SimpleDateFormat("dd/MM - HH:mm", Locale.getDefault());
+            String time = sfd.format(date.getTime());
+
+            String appendTime = "Seu contato desde " + time;
+            mTvTalkerSince.setText(appendTime);
+        }
+
+
+        private void initViewHolder(Talk contact){
+
+        mUsersCollection
+                .document(contact.getTalkerId())
+                .get()
+                .addOnSuccessListener(documentSnapshot -> {
+
+                    User userTalker = documentSnapshot.toObject(User.class);
+
+
+                    setTvTalkersName(userTalker.getName());
+                    setTvUsernameTalkers(userTalker.getUsername());
+
+                    if(contact.getDateAccepted() != null){
+                        setDate(contact.getDateAccepted());
+                    }
+                    else if(contact.getDateInvitation() != null){
+                        setDate(contact.getDateInvitation());
+                    }
+                    else {
+                        mTvTalkerSince.setVisibility(View.GONE);
+                    }
+
+
+                    if (userTalker.getThumb() != null) {
+                        setImageTalker(userTalker.getThumb());
+                    }
+                    else {
+                        setImageTalker(userTalker.getImageUrl());
+                    }
+
+                    mBtnRemoveTalker.setOnClickListener(v -> {
+
+                        //CHECK INTERNET CONNECTION
+                        if (!ShowSnackBarInfoInternet.checkConnectionAnother()) {
+                            ShowSnackBarInfoInternet.showToastInfoInternet(mContext);
+                        } else {
+                            ShowSnackBarInfoInternet.showSnack(true, mView);
+                            mOnBlockUserAdapterListener.btnRemoveContactOnClickListener(userTalker);
+                            //showDialog(userTalker);
+                        }
+
+                    });
+
+                    //LISTENER TO OPEN CONTACT ACTIVITY
+                    mImageTalkers.setOnClickListener(v -> {
+                        mOnBlockUserAdapterListener.openContactProfiletOnClickListener(contact);
+
+                    });
+
+                    mTvTalkersName.setOnClickListener(v -> {
+                        mOnBlockUserAdapterListener.openContactProfiletOnClickListener(contact);
+
+                    });
+
+                    mTvUsernameTalkers.setOnClickListener(v -> {
+                        mOnBlockUserAdapterListener.openContactProfiletOnClickListener(contact);
+
+                    });
+
+
+                })
+                .addOnFailureListener(Throwable::printStackTrace);
+
+    }
+
+}
+
+    public interface OnBlockUserAdapterListener {
+        void btnRemoveContactOnClickListener(User contact);
+
+        void openContactProfiletOnClickListener(Talk contact);
+    }
+}

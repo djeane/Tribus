@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linear_users_waiting_permission"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_detail_tribu">
+
+    <TextView
+        android:id="@+id/tv_followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="10dp"
+        android:paddingTop="4dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:text="Seguidores" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_followers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorIcons"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:scrollbars="vertical">
+    </android.support.v7.widget.RecyclerView>
+
+    <!--include layout="@layout/content_detail_tribu_followers" -->
+
+</LinearLayout>
